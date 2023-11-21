@@ -231,6 +231,16 @@ button {
     height: 600px;
     display: flex;
   }
+  #accueil > .carousel-content > .last-child > #slide3 > #fond-contact-gauche {
+    width: 150px;
+    height: 600px;
+    background-image: url("../img/accueil/sliders-accueil/slide-3/fond-contact-droite.png");
+  }
+  #accueil > .carousel-content > .last-child > #slide3 > #fond-contact-droite {
+    width: 150px;
+    height: 600px;
+    background-image: url("../img/accueil/sliders-accueil/slide-3/fond-contact-gauche.png");
+  }
   #accueil > .carousel-content > .last-child > #slide3 > #contnair-contact {
     width: 800px;
     height: 600px;

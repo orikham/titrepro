@@ -37,6 +37,15 @@ class InfosContact
     #[ORM\Column(length: 255)]
     private ?string $sollicitation = null;
 
+    #[ORM\Column(length: 5000)]
+    private ?string $presentation = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $horaires = null;
+
+    #[ORM\Column(length: 5000)]
+    private ?string $zoneDintervention = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -134,6 +143,42 @@ class InfosContact
     public function setSollicitation(string $sollicitation): static
     {
         $this->sollicitation = $sollicitation;
+
+        return $this;
+    }
+
+    public function getPresentation(): ?string
+    {
+        return $this->presentation;
+    }
+
+    public function setPresentation(string $presentation): static
+    {
+        $this->presentation = $presentation;
+
+        return $this;
+    }
+
+    public function getHoraires(): ?string
+    {
+        return $this->horaires;
+    }
+
+    public function setHoraires(string $horaires): static
+    {
+        $this->horaires = $horaires;
+
+        return $this;
+    }
+
+    public function getZoneDintervention(): ?string
+    {
+        return $this->zoneDintervention;
+    }
+
+    public function setZoneDintervention(string $zoneDintervention): static
+    {
+        $this->zoneDintervention = $zoneDintervention;
 
         return $this;
     }

@@ -334,6 +334,18 @@ button {
                     height: 600px;
                     display: flex;
 
+                    &>#fond-contact-gauche{
+                        width: 150px;
+                        height: 600px;
+                        background-image: url('../img/accueil/sliders-accueil/slide-3/fond-contact-droite.png');
+                    }
+
+                    &>#fond-contact-droite{
+                        width: 150px;
+                        height: 600px;
+                        background-image: url('../img/accueil/sliders-accueil/slide-3/fond-contact-gauche.png');
+                    }
+
                     &>#contnair-contact {
                         width: 800px;
                         height: 600px;

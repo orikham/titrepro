@@ -2,25 +2,28 @@
 
 namespace App\Controller;
 
-use App\Repository\PrestationsRepository;
+use App\Repository\CategoryRepository;
 use App\Repository\PicturesRepository;
 use App\Repository\InfosContactRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\VarDumper\VarDumper;
 
 class MainController extends AbstractController
 {
-    private $prestationsRepository;
+    
     private $picturesRepository;
     private $infosContactRepository;
+    private $CategoryRepository;
 
     public function __construct(
-        PrestationsRepository $prestationsRepository,
+       
+        CategoryRepository $CategoryRepository,
         PicturesRepository $picturesRepository,
         InfosContactRepository $infosContactRepository
     ) {
-        $this->prestationsRepository = $prestationsRepository;
+        $this->CategoryRepository = $CategoryRepository;
         $this->picturesRepository = $picturesRepository;
         $this->infosContactRepository = $infosContactRepository;
     }
@@ -28,15 +31,27 @@ class MainController extends AbstractController
     #[Route('/', name: 'app_home_page')]
     public function index(): Response
     {
-        $prestations = $this->prestationsRepository->findAll();
+        $category = $this->CategoryRepository->findAll();
         $cover = $this->picturesRepository->findBy(['type' => 'cover'], ['id' => 'DESC'], 5, null);
         $logo = $this->picturesRepository->findBy(['type' => 'logo']);
+        $picturesPrez = $this->picturesRepository->findBy(['type' => 'prez']);
+        
+        
+
         $infosContact = $this->infosContactRepository->findAll();
 
         return $this->render('main/index.html.twig', [
-            'prestations' => $prestations,
-            'pictures' => ['logo' => $logo, 'cover' => $cover],
+            
+            'pictures' => [
+                'prez' => $picturesPrez,
+                'logo' => $logo, 
+                'cover' => $cover, ],  
             'infosContact' => $infosContact,
+            'Category' => $category,
         ]);
+
+       
     }
+
+    
 }
