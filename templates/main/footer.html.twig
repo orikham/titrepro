@@ -1,0 +1,44 @@
+
+{% block footer %}
+
+	<footer class="row-limit-size-mobile">
+		<div id="rose">
+			<img id="icone-footer" src="{{ asset('asset/img/icone/footer/icone-footer.png') }}" alt="logo du site">
+		</div>
+
+		<div id="footer-droit">
+			<div id="carte-de-visite">
+				<div id="partie1">
+					<h4>CaultPaysages</h4>
+					<p>Paysagiste</p>
+					<p>361 Rue du Mas Peguet</p>
+					<p>01120 Pizay</p>
+					<p>tél: 06 21 42 14 40</p>
+				</div>
+
+				<div id="partie2">
+					<h4>Horaires</h4>
+					<p>De 8h à 18h
+						<br>
+						du lundi au samedi</p>
+					{# <a href="{{ path('app_contact') }}"><button>Nous contacter</button></a> #}
+				</div>
+
+				<div id="partie3">
+					<h4>Zone d'intervention</h4>
+					<p>Cault Paysage, Je conçois et réalise vos envies que çe soit votre jardin ou vos éspaces vert. Je me situ à Pizay et j’interviens dans les communes environnantes</p>
+				</div>
+			</div>
+			<div id="mentions">
+				<h6>&copy 2023 CaultPaysages</h6><img src="{{ asset('asset/img/icone/footer/icone-espace-footer.png') }}" alt="">
+                <a href="">Mentions légales</a><img src="{{ asset('asset/img/icone/footer/icone-espace-footer.png') }}" alt="">
+                <a href="">Protection de la vie privée</a><img src="{{ asset('asset/img/icone/footer/icone-espace-footer.png') }}" alt="">
+                <a href="">Cookies</a><img src="{{ asset('asset/img/icone/footer/icone-espace-footer.png') }}" alt="">
+				<p id="copyright">site réalisé par Orikham</p>
+				
+
+			</div>
+		</div>
+
+	</footer>
+{% endblock %}

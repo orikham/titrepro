@@ -1,0 +1,82 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}CaultPaysages | Accueil{% endblock %}
+
+{% block body %}
+    {% block content %}
+        <!-- Fil d'Ariane -->
+        <nav aria-label="Fil d'Ariane">
+            <ol>
+                <li><a href="{{ path('app_home_page') }}">Accueil</a></li>
+            </ol>
+        </nav>
+
+        <section id="accueil" class="row-limit-size">
+            <div class="carousel-content">
+
+                <div class="carouselItem first-child">
+                    <video id="slide1" autoplay loop muted>
+                        <source src="{{ asset('asset/img/accueil/sliders-accueil/slide-1/gazon.mp4') }}" alt="" type="video/mp4">
+                    </video>
+
+                    <aside>
+                        {% for picture in pictures['logo'] %}
+                            <img class="logo" src="{{ asset('asset/img' ~ picture.title) }}" alt="logo du site">
+                        {% endfor %}
+
+                        <h3>{{ prestations[0].name }} {{ prestations[1].name }} {{ prestations[2].name }}</h3>
+                        <h3>{{ infosContact[0].ville }}</h3>
+                        <p>{{ infosContact[0].accroche }}</p>
+                    </aside>
+                </div>
+
+                <div class="carouselItem second-child">
+                    <div id="slide2">
+                        <div id="slide2-left">
+                            {% for picture in pictures['cover'] %}
+                                {% if loop.index <= 2 %}
+                                    <img src="{{ asset('asset/img/' ~ picture.title) }}" alt="">
+                                    <img src="{{ asset('asset/img/' ~ picture.title) }}" alt="">
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                        <div id="slide2-middle">
+                            {% for picture in pictures['cover'] %}
+                                {% if loop.index == 3 %}
+                                    <img src="{{ asset('asset/img/' ~ picture.title) }}" alt="">
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                        <div id="slide2-right">
+                            {% for picture in pictures['cover'] %}
+                                {% if loop.index > 3 and loop.index <= 5 %}
+                                    <img src="{{ asset('asset/img/' ~ picture.title) }}" alt="">
+                                    <img src="{{ asset('asset/img/' ~ picture.title) }}" alt="">
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carouselItem last-child">
+                    <div id="slide3">
+                        <img src="{{ asset(pictures['cover'][0].title) }}" alt="">
+                        <div id="contnair-contact">
+                            <div id="plaquette-contact">
+                                <h4 id="p1">Prise de RDV, demande d'informations</h4>
+                                <div id="grande-div"><!-- ... Autre contenu ... --></div>
+                            </div>
+                        </div>
+                        <img src="{{ asset('asset/img/accueil/sliders-accueil/slide-3/fond-contact-droite.png') }}" alt="">
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="bouton-slider-accueil">
+                <div id="bouton-gauche">Précédent</div>
+                <div id="bouton-droit">Suivant</div>
+            </div>
+        </section>
+    {% endblock %}
+{% endblock %}

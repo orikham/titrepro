@@ -1,0 +1,1477 @@
+$cvert : #367433;
+$cmarron : #89601e;
+$noirounet : #020202;
+$fond : #f1f0f0;
+$cardSlide : #d9d9d9;
+
+/******RESET*****/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.row-limit-size {
+    max-width: 1200px;
+    width: 100%;
+    margin: 50px auto;
+}
+
+// .row-limit-size-mobile {
+//     max-width: 390px;
+//     width: 100%;
+
+// }
+
+a,
+ul,
+li,
+label {
+    text-decoration: none;
+    list-style: none;
+
+
+}
+
+button {
+    outline: transparent;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+/****************CSS*DESKTOP*********/
+@media screen and (min-width: 1200px) {
+
+    /*header*/
+
+    .header-desktop {
+        width: 100%;
+        height: 100px;
+        background-image: url('../img/branche-fond.png');
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        &>#logo-lien-accueil {
+            background-color: white;
+
+            &>.logo {
+                width: 150px;
+                height: 100px;
+            }
+        }
+
+        &>#menus-d {
+
+            &>ul {
+
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+
+
+                &>li {
+
+                    margin: 0 15px;
+
+                    &>a {
+                        width: 100%;
+                        height: 200px;
+                        background-color: white;
+                        text-transform: uppercase;
+                        color: $cvert ;
+                        font-size: 1.2em;
+                    }
+
+                    &>a:hover {
+                        border-bottom: 1px solid $cmarron;
+                    }
+                }
+            }
+        }
+
+        &>#menus-burger {
+            display: none;
+        }
+    }
+
+    #menus-m {
+        display: none;
+    }
+
+    /*footer*/
+    footer {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        background-color: $fond;
+
+
+
+        &>#footer-droit {
+            width: 75%;
+            display: flex;
+            flex-direction: column;
+
+            &>#carte-de-visite {
+
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+
+                &>#partie1 {
+                    &>h4 {
+                        color: $cvert;
+                        margin-bottom: 10px;
+                    }
+
+                    &>p {
+                        width: 200px;
+                        color: $cmarron;
+                    }
+                }
+
+                &>#partie2 {
+                    &>h4 {
+                        color: $cvert;
+                        margin-bottom: 10px;
+                    }
+
+                    &>p {
+                        width: 200px;
+                        color: $cmarron;
+                    }
+
+                    &>a {
+
+                        &>button {
+                            width: 100px;
+                            height: 25px;
+                            background-color: $cvert;
+                            color: white;
+                            margin-top: 10px;
+                        }
+                    }
+
+
+                }
+
+                &>#partie3 {
+                    &>h4 {
+                        color: $cvert;
+                        margin-bottom: 10px;
+
+                    }
+
+                    &>p {
+                        width: 200px;
+                        color: $cmarron;
+                    }
+                }
+            }
+
+            &>#mentions {
+                width: 800px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+
+                &>h6 {
+                    color: $cmarron;
+                }
+
+                &>a {
+                    color: $cmarron;
+                }
+
+                &>p {
+                    color: $cmarron;
+                }
+
+                &>img {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
+    }
+
+    /*section-accueil*/
+    #accueil {
+
+        &>.carousel-content {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+
+            &>.first-child {
+                width: 1000px;
+                height: 600px;
+                position: relative;
+                background-color: $cmarron;
+
+                &>#slide1 {
+                    width: 1000px;
+                    height: 600px;
+                    transition: transform 2s linear;
+                    animation: scroll 200s infinite;
+                }
+
+                &>aside {
+
+                    width: 500px;
+                    background-color: $cardSlide;
+                    opacity: 0.8;
+                    position: absolute;
+                    top: 15%;
+                    left: 40%;
+
+
+                    &>.logo {
+                        width: 150px;
+                        height: 100px;
+                        padding: 15px;
+                    }
+
+                    &>h3 {
+                        color: $cmarron;
+                        padding: 15px;
+                        font-size: 1.5rem;
+                        font-weight: bolder;
+                    }
+
+                    &>p {
+                        color: white;
+                        padding: 15px;
+                        font-weight: bolder;
+                        font-size: 1.2rem;
+                        
+
+                        &>strong {
+
+                            &>#c {
+                                color: $cvert;
+                            }
+
+                            &>#p {
+                                color: $cmarron;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &>.second-child {
+                width: 1000px;
+                height: 600px;
+
+
+
+                &>#slide2 {
+                    height: 600px;
+
+                    display: flex;
+
+
+                    &>#slide2-left {
+                        width: 350px;
+                        height: 600px;
+                        display: flex;
+                        flex-direction: column;
+
+                        &>img {
+
+                            height: 300px;
+
+                        }
+
+
+
+                    }
+
+                    &>#slide2-middle {
+                        width: 300px;
+                        height: 600px;
+
+                        &>img {
+                            width: 300px;
+                            height: 600px;
+
+                        }
+
+
+                    }
+
+                    &>#slide2-right {
+                        width: 350px;
+                        height: 600px;
+                        display: flex;
+                        flex-direction: column;
+
+
+                        &>img {
+
+                            height: 300px;
+
+
+                        }
+
+                    }
+                }
+
+            }
+
+            &>.last-child {
+                width: 1000px;
+                height: 600px;
+
+                &>#slide3 {
+                    width: 100%;
+                    height: 600px;
+                    display: flex;
+
+                    &>#contnair-contact {
+                        width: 800px;
+                        height: 600px;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: flex-start;
+                        justify-content: flex-end;
+
+                        background-image: url('../img/accueil/sliders-accueil/slide-3/petit-fond-contact-slide.png');
+
+                        &>#plaquette-contact {
+                            background-color: $cmarron;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-around;
+                            margin-top: 10%;
+                            margin-right: 10%;
+
+                            &>#p1 {
+                                color: white;
+                                font-weight: bold;
+                                border-bottom: 3px solid $cvert;
+                                margin: 10px 15px;
+                                font-size: 1.2rem;
+                            }
+
+                            &>#p2 {
+                                width: 350px;
+                                color: white;
+                                font-weight: bold;
+                                margin: 10px 15px;
+                                font-size: 1.2rem;
+                            }
+
+                            opacity: 0.9;
+
+                            &>#grande-div {
+
+                                width: 100%;
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+                                justify-content: space-around;
+
+                                &>#lien-contact {
+                                    &>#phone {
+                                        width: 300px;
+                                        height: 70px;
+                                        border-radius: 200px;
+                                        background-color: $cvert;
+                                        display: flex;
+                                        flex-direction: row;
+                                        align-items: center;
+                                        margin: 15px;
+
+                                        &>#svg-phone {
+                                            width: 60px;
+                                            height: 60px;
+                                            background-color: $cvert;
+                                            border-radius: 100px;
+                                            padding: 5px;
+
+
+
+                                        }
+
+                                        &>.petite-div-contact {
+                                            display: flex;
+                                            flex-direction: column;
+                                            padding: 5px;
+
+
+
+                                            &>h5 {
+
+                                                color: white;
+                                                font-weight: bolder;
+                                                margin: 5px;
+
+
+                                            }
+
+                                            &>a {
+                                                color: white;
+                                                font-weight: bolder;
+                                                padding: 5px;
+                                            }
+
+
+                                        }
+                                    }
+
+                                    &>#mail {
+                                        width: 300px;
+                                        height: 70px;
+                                        border-radius: 200px;
+                                        background-color: $cvert;
+                                        display: flex;
+                                        flex-direction: row;
+                                        align-items: center;
+                                        margin: 15px;
+
+                                        &>#svg-mail {
+                                            width: 60px;
+                                            height: 60px;
+                                            background-color: $cvert;
+                                            border-radius: 100px;
+                                            padding: 5px;
+                                            fill: #ffffff;
+                                        }
+
+                                        &>.petite-div-contact {
+                                            display: flex;
+                                            flex-direction: column;
+                                            padding: 5px;
+
+
+
+                                            &>h5 {
+
+                                                color: white;
+                                                font-weight: bolder;
+                                                margin: 5px;
+
+
+                                            }
+
+                                            &>a {
+                                                color: white;
+                                                font-weight: bolder;
+                                                padding: 5px;
+                                            }
+
+
+                                        }
+                                    }
+
+
+
+
+                                }
+
+                                &>#logo-bis {
+                                    width: 150px;
+
+                                    &>img {
+                                        width: 150px;
+                                        height: 100px;
+                                    }
+
+                                    &>#adresse-responsive {
+                                        display: none;
+                                    }
+
+                                }
+
+                            }
+                        }
+                    }
+
+
+
+                    &>img {
+                        width: 150px;
+                        height: 600px;
+                    }
+
+                }
+            }
+        }
+
+        &>#bouton-slider-accueil {
+            display: flex;
+            justify-content: center;
+
+
+
+            &>#bouton-gauche {
+                width: 100px;
+                height: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: $cvert;
+                border-radius: 100px;
+                color: white;
+                margin: 25px 5px;
+                cursor: pointer;
+
+            }
+
+            &>#bouton-droit {
+                width: 100px;
+                height: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: $cvert;
+                border-radius: 100px;
+                color: white;
+                margin: 25px 5px;
+                cursor: pointer;
+
+            }
+
+        }
+
+        &>#presentation {
+            width: 100%;
+            height: 600px;
+            display: flex;
+
+            margin-top: 50px;
+
+
+
+            &>#bio {
+                width: 50%;
+                height: 100%;
+                
+                display: flex;
+                border-top: 1px solid $cvert;
+                border-bottom: 1px solid $cvert;
+                border-left: 1px solid $cvert;
+                animation: slide-left 5s ease both;
+                background-image: url('../img/brown-point-fond.png');
+
+                @keyframes slide-left {
+                    0% {
+                        transform: translateX(-100%);
+                    }
+
+                    100% {
+                        transform: translateX(0);
+                    }
+                }
+
+
+                &>#prez {
+                    padding: 15px;
+                    text-align: center;
+                    display: flex;
+                    align-items: center;
+                    font-size: 1.2rem;
+                    
+                    color: $cvert;
+                }
+            }
+
+
+
+
+            &>#illustrations {
+                width: 50%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                border-top: 1px solid $cvert;
+                border-bottom: 1px solid $cvert;
+                border-right: 1px solid $cvert;
+                animation: slide-right 5s ease both;
+                background-image: url('../img/brown-point-fond.png');
+
+                &>#illustration-presentation-haut {
+                    display: flex;
+                    width: 100%;
+                    justify-content: space-evenly;
+
+                    &>img {
+                        width: 250px;
+                        padding-top: 25px;
+                        z-index: 1000;
+                    }
+                }
+
+                &>#cubix {
+                    width: 100px;
+                    height: 100px;
+                    background-color: $cvert;
+                    display: flex;
+
+                }
+
+                &>#illustration-presentation-bas {
+                    display: flex;
+
+                    &>img {
+                        width: 250px;
+                        padding-bottom: 25px;
+                    }
+                }
+
+                @keyframes slide-right {
+                    0% {
+                        transform: translateX(100%);
+                    }
+
+                    100% {
+                        transform: translateX(0);
+                    }
+                }
+
+            }
+        }
+
+
+    }
+
+    /*section-prestation*/
+    #prestation{
+        &>#interface-prestation{
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+
+            &>.interface-prestation-colonnes{
+                display: flex;
+                flex-direction: column;
+
+                &>.squelette-interface-prestation{
+                    width: 400px;
+                    height: 200px;
+                    align-items: center;
+                    text-align: center;
+                    margin: 25px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+
+                    &>h3{    
+                       padding: 10px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 1.2rem;
+                        opacity: 0.8;
+                        border-radius: 100px;
+                        background-color: $fond;
+                        text-transform: capitalize;
+                        color: $cmarron;
+                    }
+
+                    &>ul{
+                        width: 100%;
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        justify-content: space-evenly;
+
+                        &>li{
+                            
+                            background-color: $cvert;
+                            border-radius: 100px;
+                            margin: 5px;
+                            display: flex;
+                            justify-content: center;
+                        align-items: center;
+                        opacity: 0.9;
+
+                            &>a{
+                                padding: 5px;
+                                font-size: 1rem;
+                                color: $fond;
+                                text-transform: uppercase;
+                            }
+                        }
+                    }
+                }
+
+                &>#equipement{
+                   
+                    background-image: url(../img/prestation/equipement.jpg);
+                    background-size: cover;
+
+                    
+                }
+
+                &>#pelouse{
+                    
+                    background-image:url(../img/prestation/pelouse.jpg);
+                    background-size: cover;
+                }
+
+                &>#amenagement{
+                   
+                    background-image:url(../img/prestation/amenagement.jpg);
+                    background-size: cover;
+                }
+        
+                &>#arbuste{
+                   
+                    background-image: url(../img/prestation/arbuste.jpg);
+                    background-size: cover;
+                    height: 450px;
+
+                    
+                }
+
+                &>#jardin{
+                    
+                    background-image:url(../img/prestation/jardin.jpg);
+                    background-size: cover;
+                }            
+         
+                &>#entretien{
+                   
+                    background-image: url(../img/prestation/entretien.jpg);
+                    background-size: cover;
+
+                    
+                }
+
+                &>#haie{
+                    
+                    background-image:url(../img/prestation/haie.jpg);
+                    background-size: cover;
+                }
+
+                &>#gestion-dechet{
+                   
+                    background-image:url(../img/prestation/gestion-des-dechets.jpg);
+                    background-size: cover;
+                }
+            }
+        }
+    }
+
+    /*section-paysagisme*/
+    #paysagisme{
+
+        &>#derniers-articles{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+
+            &>.article-card{
+                width: 300px;
+                margin: 10px;
+                border: 1px solid $cvert;
+                border-radius: 25px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                box-shadow:  1px 1px 10px 10px $cmarron;
+               
+                &>h3{
+                    padding: 5px;
+                    color: $cvert;
+                    font-size: 1.4rem;
+
+                }
+                &>h4{
+                    padding: 5px;
+                    color: $cvert;
+                    font-size: 1.3rem;
+                }
+                &>img{
+                    width: 300px;
+                    border-radius: 10px;
+                }
+
+                
+                &>.bouton-voir{
+                    margin: 5px;
+                    padding: 5px;
+                    color: white;
+                    border-radius: 100px;
+                    background-color: $cvert;
+                    font-size: 1.2rem;
+                }
+
+            }
+
+            
+        }
+    }
+
+    /*section-paysagisme*/
+    #amenagement{
+
+        &>#derniers-articles-amenagement{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+
+            &>.amenagement-article-card{
+                width: 300px;
+                margin: 10px;
+                border: 1px solid $cvert;
+                border-radius: 25px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                box-shadow:  1px 1px 10px 10px $cmarron;
+               
+                &>h3{
+                    padding: 5px;
+                    color: $cvert;
+                    font-size: 1.4rem;
+
+                }
+                &>h4{
+                    padding: 5px;
+                    color: $cvert;
+                    font-size: 1.3rem;
+                }
+                &>img{
+                    width: 300px;
+                    border-radius: 10px;
+                }
+
+                
+                &>.bouton-voir{
+                    margin: 5px;
+                    padding: 5px;
+                    color: white;
+                    border-radius: 100px;
+                    background-color: $cvert;
+                    font-size: 1.2rem;
+                }
+
+            }
+
+            
+        }
+    }
+
+}
+
+/****************CSS*MOBILE****************/
+@media screen and (min-width: 390px) and (max-width: 1200px) {
+
+    /*header*/
+    .header-mobile {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+
+
+        &>#logo-lien-accueil {
+
+
+
+
+            &>.logo {
+                width: 150px;
+
+            }
+        }
+
+        &>#menus-d {
+            display: none;
+        }
+
+        &>#menus-burger {
+            &>#svg-header {
+                width: 60px;
+                height: 60px;
+                cursor: pointer;
+
+            }
+        }
+
+
+    }
+
+    #menus-m {
+        width: 100%;
+        display: none;
+        background-color: $cvert;
+        position: fixed;
+        z-index: 10;
+
+
+
+        &>ul {
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+
+            &>li {
+                width: 50%;
+                height: 50px;
+                display: flex;
+
+                background-color: $cardSlide;
+                border: 1px solid $cvert;
+
+                &>a {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    //background-color: $fond;
+                    text-transform: uppercase;
+                    color: $cvert ;
+                }
+            }
+        }
+    }
+
+    /*footer*/
+
+    footer {
+        width: 100%;
+
+        &>#rose {
+            display: none;
+
+
+        }
+
+        &>#footer-droit {
+            &>#carte-de-visite {
+                display: none;
+            }
+
+            &>#mentions {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+
+
+                &>h6 {
+                    color: $cmarron;
+                }
+
+                &>a {
+                    color: $cmarron;
+                    font-size: 0.5rem;
+                }
+
+                &>p {
+                    color: $cmarron;
+                    font-size: 0.5rem;
+                }
+
+                &>img {
+                    width: 20px;
+                    height: 20px;
+                }
+
+            }
+        }
+    }
+
+    /*section-accueil*/
+    #accueil {
+        width: 390px;
+
+        &>.carousel-content {
+            width: 100%;
+
+
+            &>.first-child {
+                width: 100%;
+
+
+
+                &>#slide1 {
+                    width: 100%;
+                    display: none;
+
+
+                }
+
+                &>aside {
+                    width: 100%;
+                    background-color: $cardSlide;
+                    opacity: 0.8;
+
+                    &>.logo {
+                        width: 150px;
+                        height: 100px;
+                    }
+
+                    &>h3 {
+                        color: $cmarron;
+                        padding: 15px;
+                        font-size: 1.5rem;
+                        font-weight: bolder;
+                    }
+
+                    &>p {
+                        color: white;
+                        padding: 15px;
+                        font-weight: bolder;
+                        font-size: 1.2rem;
+
+                        &>strong {
+
+                            &>#c {
+                                color: $cvert;
+                            }
+
+                            &>#p {
+                                color: $cmarron;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &>.second-child {
+                display: none;
+
+                &>#slide2 {
+
+                    display: none;
+
+
+
+                }
+
+            }
+
+            &>.last-child {
+                width: 100%;
+
+
+                &>#slide3 {
+                    width: 100%;
+                    display: flex;
+
+                    &>#contnair-contact {
+                        width: 100%;
+
+
+                        &>#plaquette-contact {
+                            background-color: $cmarron;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-around;
+                            align-items: flex-start;
+
+
+                            &>#p1 {
+                                color: white;
+                                font-weight: bold;
+                                border-bottom: 3px solid $cvert;
+                                margin: 10px 15px;
+                                font-size: 1.2rem;
+                            }
+
+                            &>#p2 {
+                                width: 350px;
+                                color: white;
+                                font-weight: bold;
+                                margin: 10px 15px;
+                                font-size: 1.2rem;
+                            }
+
+                            //opacity: 0.5;
+
+                            &>#grande-div {
+
+                                width: 100%;
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+                                justify-content: space-around;
+
+                                &>#lien-contact {
+                                    &>#phone {
+                                        width: 300px;
+                                        height: 70px;
+                                        border-radius: 200px;
+                                        background-color: $cvert;
+                                        display: flex;
+                                        flex-direction: row;
+                                        align-items: center;
+                                        margin: 15px;
+
+                                        &>#svg-phone {
+                                            width: 60px;
+                                            height: 60px;
+                                            background-color: $cvert;
+                                            border-radius: 100px;
+                                            padding: 5px;
+
+
+
+                                        }
+
+                                        &>.petite-div-contact {
+                                            display: flex;
+                                            flex-direction: column;
+                                            padding: 5px;
+
+
+
+                                            &>h5 {
+
+                                                color: white;
+                                                font-weight: bolder;
+                                                margin: 5px;
+
+
+                                            }
+
+                                            &>a {
+                                                color: white;
+                                                font-weight: bolder;
+                                                padding: 5px;
+                                            }
+
+
+                                        }
+                                    }
+
+                                    &>#mail {
+                                        width: 300px;
+                                        height: 70px;
+                                        border-radius: 200px;
+                                        background-color: $cvert;
+                                        display: flex;
+                                        flex-direction: row;
+                                        align-items: center;
+                                        margin: 15px;
+
+                                        &>#svg-mail {
+                                            width: 60px;
+                                            height: 60px;
+                                            background-color: $cvert;
+                                            border-radius: 100px;
+                                            padding: 5px;
+                                        }
+
+                                        &>.petite-div-contact {
+                                            display: flex;
+                                            flex-direction: column;
+                                            padding: 5px;
+
+
+
+                                            &>h5 {
+
+                                                color: white;
+                                                font-weight: bolder;
+                                                margin: 5px;
+
+
+                                            }
+
+                                            &>a {
+                                                color: white;
+                                                font-weight: bolder;
+                                                padding: 5px;
+                                            }
+
+
+                                        }
+                                    }
+
+
+
+
+                                }
+
+                                &>#logo-bis {
+                                    width: 150px;
+
+                                    &>img {
+                                        width: 150px;
+                                        height: 100px;
+                                        background-color: #f1f0f0;
+                                        opacity: 0.9;
+                                        border-radius: 5px;
+                                    }
+
+                                    &>#adresse-responsive {
+                                        width: 150px;
+                                        text-align: center;
+
+                                        &>h4 {
+                                            &>span {
+                                                color: $cvert;
+                                            }
+                                        }
+
+                                        &>p {
+                                            color: white;
+                                            font-weight: bold;
+                                        }
+                                    }
+
+                                }
+
+
+                            }
+                        }
+                    }
+
+
+
+                    &>img {
+                        display: none;
+
+                    }
+                }
+            }
+        }
+
+        &>#bouton-slider-accueil{
+            display: none;
+        }
+
+        &>#presentation {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            background-image: url('../img/brown-point-fond.png');
+            margin-top: 50px;
+
+            &>#bio {
+                width: 100%;
+                height: 100%;
+
+                display: flex;
+                border-top: 1px solid $cvert;
+                //border-bottom: 0.5px solid $cvert;
+                border-left: 1px solid $cvert;
+                border-right: 1px solid $cvert;
+                animation: slide-left 5s ease both;
+                background-image: url('../img/brown-point-fond.png');
+
+                @keyframes slide-left {
+                    0% {
+                        transform: translateX(-100%);
+                    }
+
+                    100% {
+                        transform: translateX(0);
+                    }
+                }
+
+                &>#prez {
+                    text-align: center;
+                    display: flex;
+                    align-items: center;
+font-size: 1.2rem;
+                    color: $cvert;
+                    padding: 15px;
+                }
+            }
+
+            &>#illustrations {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                //border-top: 0.5px solid $cvert;
+                border-left: 1px solid $cvert;
+                border-bottom: 1px solid $cvert;
+                border-right: 1px solid $cvert;
+                animation: slide-right 5s ease both;
+                background-image: url('../img/brown-point-fond.png');
+
+                @keyframes slide-right {
+                    0% {
+                        transform: translateX(100%);
+                    }
+
+                    100% {
+                        transform: translateX(0);
+                    }
+                }
+
+                &>#illustration-presentation-haut {
+                    display: flex;
+                    width: 100%;
+                    justify-content: space-evenly;
+                    
+
+                    &>img {
+                        width: 150px;
+                        padding-top: 25px;
+                        
+                        
+                    }
+                }
+
+                &>#cubix {
+                    width: 100px;
+                    height: 100px;
+                    background-color: $cvert;
+                    display: flex;
+
+                }
+
+                &>#illustration-presentation-bas {
+                    display: flex;
+
+                    &>img {
+                        width: 150px;
+                        padding-bottom: 25px;
+                    }
+                }
+
+
+
+
+            }
+        }
+    }
+
+    /*section-prestation*/
+    #prestation{
+        &>#interface-prestation{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &>.interface-prestation-colonnes{
+                display: flex;
+                flex-direction: column;
+
+                &>.squelette-interface-prestation{
+                    width: 400px;
+                    height: 200px;
+                    align-items: center;
+                    text-align: center;
+                    margin: 25px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+
+                    &>h3{    
+                       padding: 10px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 1.2rem;
+                        opacity: 0.8;
+                        border-radius: 100px;
+                        background-color: $fond;
+                        text-transform: capitalize;
+                        color: $cmarron;
+                    }
+
+                    &>ul{
+                        width: 100%;
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        justify-content: space-evenly;
+
+                        &>li{
+                            
+                            background-color: $cvert;
+                            border-radius: 100px;
+                            margin: 5px;
+                            display: flex;
+                            justify-content: center;
+                        align-items: center;
+                        opacity: 0.9;
+
+                            &>a{
+                                padding: 5px;
+                                font-size: 1rem;
+                                color: $fond;
+                                text-transform: uppercase;
+                            }
+                        }
+                    }
+                }
+
+                &>#equipement{
+                   
+                    background-image: url(../img/prestation/equipement.jpg);
+                    background-size: cover;
+
+                    
+                }
+
+                &>#pelouse{
+                    
+                    background-image:url(../img/prestation/pelouse.jpg);
+                    background-size: cover;
+                }
+
+                &>#amenagement{
+                   
+                    background-image:url(../img/prestation/amenagement.jpg);
+                    background-size: cover;
+                }
+        
+                &>#arbuste{
+                   
+                    background-image: url(../img/prestation/arbuste.jpg);
+                    background-size: cover;
+                    
+
+                    
+                }
+
+                &>#jardin{
+                    
+                    background-image:url(../img/prestation/jardin.jpg);
+                    background-size: cover;
+                }            
+         
+                &>#entretien{
+                   
+                    background-image: url(../img/prestation/entretien.jpg);
+                    background-size: cover;
+
+                    
+                }
+
+                &>#haie{
+                    
+                    background-image:url(../img/prestation/haie.jpg);
+                    background-size: cover;
+                }
+
+                &>#gestion-dechet{
+                   
+                    background-image:url(../img/prestation/gestion-des-dechets.jpg);
+                    background-size: cover;
+                }
+            }
+        }
+    }
+
+}
