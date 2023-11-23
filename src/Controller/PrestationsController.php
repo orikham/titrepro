@@ -15,7 +15,10 @@ class PrestationsController extends AbstractController
     {
         $categories = $categoryRepository->findAll();
 
-        $sousCategory = $sousCategoryRepository->getsoucat();
+        $sousCategory = [];
+        foreach ($categories as $category) {
+            $sousCategory[$category->getId()] = $category->getSoucat();
+        }
         
         return $this->render('prestations/prestations.html.twig', ['categories' => $categories, 'sousCategories' => $sousCategory]);
     }

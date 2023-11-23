@@ -495,14 +495,14 @@ button {
     text-transform: capitalize;
     color: #89601e;
   }
-  #prestation > #interface-prestation > .interface-prestation-colonnes > .squelette-interface-prestation > ul {
+  #prestation > #interface-prestation > .interface-prestation-colonnes > .squelette-interface-prestation > .menus-sous-cat {
     width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
   }
-  #prestation > #interface-prestation > .interface-prestation-colonnes > .squelette-interface-prestation > ul > li {
+  #prestation > #interface-prestation > .interface-prestation-colonnes > .squelette-interface-prestation > .menus-sous-cat > li {
     background-color: #367433;
     border-radius: 100px;
     margin: 5px;
@@ -511,7 +511,7 @@ button {
     align-items: center;
     opacity: 0.9;
   }
-  #prestation > #interface-prestation > .interface-prestation-colonnes > .squelette-interface-prestation > ul > li > a {
+  #prestation > #interface-prestation > .interface-prestation-colonnes > .squelette-interface-prestation > .menus-sous-cat > li > a {
     padding: 5px;
     font-size: 1rem;
     color: #f1f0f0;
