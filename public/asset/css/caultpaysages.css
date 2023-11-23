@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /******RESET*****/
 * {
   margin: 0;
@@ -516,33 +517,33 @@ button {
     color: #f1f0f0;
     text-transform: uppercase;
   }
-  #prestation > #interface-prestation > .interface-prestation-colonnes > #equipement {
-    background-image: url(../img/prestation/equipement.jpg);
+  #prestation > #interface-prestation > .interface-prestation-colonnes > #taille {
+    background-image: url(../img/prestation/taille.jpg);
     background-size: cover;
   }
-  #prestation > #interface-prestation > .interface-prestation-colonnes > #pelouse {
-    background-image: url(../img/prestation/pelouse.jpg);
+  #prestation > #interface-prestation > .interface-prestation-colonnes > #tonte {
+    background-image: url(../img/prestation/tonte.jpg);
     background-size: cover;
   }
-  #prestation > #interface-prestation > .interface-prestation-colonnes > #amenagement {
-    background-image: url(../img/prestation/amenagement.jpg);
+  #prestation > #interface-prestation > .interface-prestation-colonnes > #desherbage {
+    background-image: url(../img/prestation/désherbage.jpg);
     background-size: cover;
   }
-  #prestation > #interface-prestation > .interface-prestation-colonnes > #arbuste {
-    background-image: url(../img/prestation/arbuste.jpg);
+  #prestation > #interface-prestation > .interface-prestation-colonnes > #arrosage {
+    background-image: url(../img/prestation/arrosage.jpg);
     background-size: cover;
     height: 450px;
   }
-  #prestation > #interface-prestation > .interface-prestation-colonnes > #jardin {
-    background-image: url(../img/prestation/jardin.jpg);
+  #prestation > #interface-prestation > .interface-prestation-colonnes > #creation {
+    background-image: url(../img/prestation/creation.jpg);
     background-size: cover;
   }
-  #prestation > #interface-prestation > .interface-prestation-colonnes > #entretien {
-    background-image: url(../img/prestation/entretien.jpg);
+  #prestation > #interface-prestation > .interface-prestation-colonnes > #plantation {
+    background-image: url(../img/prestation/plantations.jpg);
     background-size: cover;
   }
-  #prestation > #interface-prestation > .interface-prestation-colonnes > #haie {
-    background-image: url(../img/prestation/haie.jpg);
+  #prestation > #interface-prestation > .interface-prestation-colonnes > #petit-travaux {
+    background-image: url(../img/prestation/petittravaux.jpg);
     background-size: cover;
   }
   #prestation > #interface-prestation > .interface-prestation-colonnes > #gestion-dechet {

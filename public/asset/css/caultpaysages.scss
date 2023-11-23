@@ -275,7 +275,7 @@ button {
                     height: 600px;
 
                     display: flex;
-
+                    
 
                     &>#slide2-left {
                         width: 350px;
@@ -286,6 +286,7 @@ button {
                         &>img {
 
                             height: 300px;
+                            
 
                         }
 
@@ -716,52 +717,52 @@ button {
                     }
                 }
 
-                &>#equipement{
+                &>#taille{
                    
-                    background-image: url(../img/prestation/equipement.jpg);
+                    background-image: url(../img/prestation/taille.jpg);
                     background-size: cover;
 
                     
                 }
 
-                &>#pelouse{
+                &>#tonte{
                     
-                    background-image:url(../img/prestation/pelouse.jpg);
+                    background-image:url(../img/prestation/tonte.jpg);
                     background-size: cover;
                 }
 
-                &>#amenagement{
+                &>#desherbage{
                    
-                    background-image:url(../img/prestation/amenagement.jpg);
+                    background-image:url(../img/prestation/désherbage.jpg);
                     background-size: cover;
                 }
         
-                &>#arbuste{
+                &>#arrosage{
                    
-                    background-image: url(../img/prestation/arbuste.jpg);
+                    background-image: url(../img/prestation/arrosage.jpg);
                     background-size: cover;
                     height: 450px;
 
                     
                 }
 
-                &>#jardin{
+                &>#creation{
                     
-                    background-image:url(../img/prestation/jardin.jpg);
+                    background-image:url(../img/prestation/creation.jpg);
                     background-size: cover;
                 }            
          
-                &>#entretien{
+                &>#plantation{
                    
-                    background-image: url(../img/prestation/entretien.jpg);
+                    background-image: url(../img/prestation/plantations.jpg);
                     background-size: cover;
 
                     
                 }
 
-                &>#haie{
+                &>#petit-travaux{
                     
-                    background-image:url(../img/prestation/haie.jpg);
+                    background-image:url(../img/prestation/petittravaux.jpg);
                     background-size: cover;
                 }
 

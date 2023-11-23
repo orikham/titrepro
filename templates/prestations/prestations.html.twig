@@ -1,13 +1,124 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}CaultPaysages | Prestation{% endblock %}
+{% block title %}CaultPaysages | Prestation
+{% endblock %}
 
 {% block body %}
 
-    {% block content %}
+	{% block content %}
+		{{ dump(sousCategories)}} 
+
+		<section id="prestation" class="row-limit-size">
+			<div id="interface-prestation">
+                {% for categorie in categories %}
+                    {% if loop.index == 1 %}
+                        <div class="interface-prestation-colonnes">
+                            <div id="taille" class="squelette-interface-prestation">
+                                <h3>{{categorie.name}}</h3>
+                                <ul>
+                                    {% for sousCategorie in sousCategories %}
+                                        {% if sousCategorie.categories == '' %} 
+                                            <li><a href="">{{ sousCategorie.name }}</a></li>
+                                            {# <li><a href=""></a></li>
+                                            <li><a href=""></a></li>
+                                            <li><a href=""></a></li>
+                                            <li><a href=""></a></li> #}
+                                        {% endif %}
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                    {% endif %} 
+                    {% if loop.index == 2 %}
+                             <div id="tonte" class="squelette-interface-prestation">
+                                <h3>{{categorie.name}}</h3>
+                                {# <ul>
+                                    <li><a href="">tonte</a></li>
+                                    <li><a href="">entretien</a></li>
+                                </ul> #}
+                            </div>
+                    {% endif %}
+                    {% if loop.index == 3 %}
+                            <div id="desherbage" class="squelette-interface-prestation">
+                                <h3>{{categorie.name}}</h3>
+                                {# <ul>
+                                    <li><a href="">terrasse</a></li>
+                                    <li><a href="">cloture</a></li>
+                                    <li><a href="">créations</a></li>
+                                    <li><a href="">plantations</a></li>
+                                </ul> #}
+                            </div> 
+
+                    
+                        </div>
+                    {% endif %}
 
 
+                    {% if loop.index == 4 %}
+                        <div class="interface-prestation-colonnes">
+                            <div id="arrosage" class="squelette-interface-prestation">
+                            <h3>{{categorie.name}}</h3>
+                            {# <ul>
+                                <li><a href="">arrosage</a></li>
+                                <li><a href="">taille</a></li>
+                                <li><a href="">débroussaillage</a></li>
+                                <li><a href="">plantations</a></li>
+                            </ul> #}
 
-    {% endblock %}
+                            </div>
+                    {% endif %}
+                    {% if loop.index == 5 %}
+                            <div id="creation" class="squelette-interface-prestation">
+                                <h3>{{categorie.name}}</h3>
+                                {# <ul>
+                                    <li><a href="">créations</a></li>
+                                    <li><a href="">plantations</a></li>
+                                    <li><a href="">entretiens</a></li>
+                                    <li><a href="">aménagements</a></li>
+                                </ul> #}
+                            </div>
+                        </div>
+                    {% endif %}
 
+                    {% if loop.index == 6 %}
+                        <div class="interface-prestation-colonnes">
+                            <div id="plantation" class="squelette-interface-prestation">
+                                <h3>{{categorie.name}}</h3>
+                                {# <ul>
+                                    <li><a href="">tonte</a></li>
+                                    <li><a href="">taille</a></li>
+                                    <li><a href="">désherbage</a></li>
+                                    <li><a href="">arrosage</a></li>
+                                </ul> #}
+                            </div>
+                    {% endif %} 
+                    {% if loop.index == 7 %}
+                            <div id="petit-travaux" class="squelette-interface-prestation">
+                                <h3>{{categorie.name}}</h3>
+                                {# <ul>
+                                    <li><a href="">taille</a></li>
+
+                                </ul> #}
+                            </div>
+                    {% endif %}
+                    {% if loop.index == 8 %}
+                            <div id="gestion-dechet" class="squelette-interface-prestation">
+                                <h3>{{categorie.name}}</h3>
+                                {# <ul>
+                                    <li><a href="">recyclage</a></li>
+                                    <li><a href="">produit</a></li>
+                                </ul> #}
+                            </div>
+                        </div>
+                    {% endif %}    
+                        
+                    
+                {% endfor %}
+
+			</div>
+
+
+		</section>
+
+
+	{% endblock %}
 {% endblock %}

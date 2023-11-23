@@ -36,29 +36,35 @@
 
 				<div class="carouselItem second-child">
 					<div id="slide2">
-						<div id="slide2-left">
-							{% for picture in pictures['cover'] %}
-								{% if loop.index <= 2 %}
+						{% for picture in pictures['cover'] %}
+
+							{% if loop.index == 1 %}
+								<div id="slide2-left">
 									<img src="{{ asset('asset/img/accueil/sliders-accueil/slide-2/' ~ picture.title) }}" alt="">
 
 								{% endif %}
-							{% endfor %}
-						</div>
-						<div id="slide2-middle">
-							{% for picture in pictures['cover'] %}
-								{% if loop.index == 3 %}
+								{% if loop.index == 2 %}
 									<img src="{{ asset('asset/img/accueil/sliders-accueil/slide-2/' ~ picture.title) }}" alt="">
-								{% endif %}
-							{% endfor %}
-						</div>
-						<div id="slide2-right">
-							{% for picture in pictures['cover'] %}
-								{% if loop.index > 3 and loop.index <= 5 %}
-									<img src="{{ asset('asset/img/accueil/sliders-accueil/slide-2/' ~ picture.title) }}" alt="">
+								</div>
+							{% endif %}
 
+							{% if loop.index == 3 %}
+								<div id="slide2-middle">
+									<img src="{{ asset('asset/img/accueil/sliders-accueil/slide-2/' ~ picture.title) }}" alt="">
+								</div>
+							{% endif %}
+
+							{% if loop.index == 4 %}
+								<div id="slide2-right">
+									<img src="{{ asset('asset/img/accueil/sliders-accueil/slide-2/' ~ picture.title) }}" alt="">
 								{% endif %}
-							{% endfor %}
-						</div>
+								{% if loop.index == 5 %}
+								
+									<img src="{{ asset('asset/img/accueil/sliders-accueil/slide-2/' ~ picture.title) }}" alt="">
+								</div>	
+							{% endif %}
+						{% endfor %}
+
 					</div>
 				</div>
 
@@ -114,7 +120,7 @@
 										</div>
 									</div>
 								</div>
-                                <p id="p2">{{ infosContact[0].accroche }}
+								<p id="p2">{{ infosContact[0].accroche }}
 								</p>
 							</div>
 						</div>
@@ -129,7 +135,7 @@
 				<div id="bouton-droit">Suivant</div>
 			</div>
 
-            <div id="presentation">
+			<div id="presentation">
 				<div id="bio">
 					<p id="prez">{{ infosContact[0].presentation }}</p>
 				</div>

@@ -1,0 +1,45 @@
+{% block footer %}
+
+	<footer class="row-limit-size-mobile">
+		<div id="rose">
+			<img id="icone-footer" src="{{ asset('asset/img/icone/footer/icone-footer.png') }}" alt="logo du site">
+		</div>
+
+		<div id="footer-droit">
+			<div id="carte-de-visite">
+				<div id="partie1">
+					 <h4>{{ this.Footer['infosContact'][0].name }}</h4>
+					<p>Paysagiste</p>
+					<p>{{ this.Footer['infosContact'][0].adresse }}</p>
+					<p>{{ this.Footer['infosContact'][0].codePostal }}
+						{{ this.Footer['infosContact'][0].ville }}
+					</p>
+					<p>tél:
+						{{ this.Footer['infosContact'][0].phone }}</p> 
+						{# {{ dump(this.Footer['infosContact'][0].name)}} #}
+				</div>
+
+				<div id="partie2">
+					<h4>Horaires</h4>
+					 <p>{{this.Footer['infosContact'][0].horaires }}</p> 
+					{# <a href="{{ path('app_contact') }}"><button>Nous contacter</button></a> #}
+				</div>
+
+				<div id="partie3">
+					<h4>Zone d'intervention</h4>
+					<p>{{ this.Footer['infosContact'][0].zoneDintervention }}</p> 
+				</div>
+			</div>
+			<div id="mentions">
+				<h6>&copy 2023 CaultPaysages</h6><img src="{{ asset('asset/img/icone/footer/icone-espace-footer.png') }}" alt="">
+				<a href="">Mentions légales</a><img src="{{ asset('asset/img/icone/footer/icone-espace-footer.png') }}" alt="">
+				<a href="">Protection de la vie privée</a><img src="{{ asset('asset/img/icone/footer/icone-espace-footer.png') }}" alt="">
+				<a href="">Cookies</a><img src="{{ asset('asset/img/icone/footer/icone-espace-footer.png') }}" alt="">
+				<p id="copyright">site réalisé par Orikham</p>
+
+
+			</div>
+		</div>
+
+	</footer>
+{% endblock %}
