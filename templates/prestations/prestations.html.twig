@@ -6,120 +6,30 @@
 {% block body %}
 
 	{% block content %}
-		{# {{ dump(sousCategories)}}  #}
+
 
 		<section id="prestation" class="row-limit-size">
 			<div id="interface-prestation">
-                {% for categorie in categories %}
-                {# {{ dump(categories)}} #}
-                    {% if loop.index == 1 %}
-                        <div class="interface-prestation-colonnes">
-                            <div id="taille" class="squelette-interface-prestation">
-                                <h3>{{categorie.name}}</h3>
-                                
-                                {# <ul class="menus-sous-cat">
-                                    {% for sousCategory in sousCategories[categorie.id] %}
-                                        
-                                            <li><a href="">{{ sousCategory.name }}</a></li>
-                                            {# <li><a href=""></a></li>
-                                            <li><a href=""></a></li>
-                                            <li><a href=""></a></li>
-                                            <li><a href=""></a></li> 
-                                        
-                                     {% endfor %}
-                                </ul> #}
-                            </div>
-                    {% endif %} 
-                    {% if loop.index == 2 %}
-                             <div id="tonte" class="squelette-interface-prestation">
-                                <h3>{{categorie.name}}</h3>
-                                <ul class="menus-sous-cat">
-                                {% for sousCategory in sousCategories[categorie.id] %}
-                                    <li><a href="">{{ sousCategory.name }}</a></li>
-                                {% endfor %}  
-                                </ul>
-                            </div>
-                    {% endif %}
-                    {% if loop.index == 3 %}
-                            <div id="desherbage" class="squelette-interface-prestation">
-                                <h3>{{categorie.name}}</h3>
-                                {# <ul class="menus-sous-cat">
-                                    <li><a href="">terrasse</a></li>
-                                    <li><a href="">cloture</a></li>
-                                    <li><a href="">créations</a></li>
-                                    <li><a href="">plantations</a></li>
-                                </ul> #}
-                            </div> 
-
-                    
-                        </div>
-                    {% endif %}
-
-
-                    {% if loop.index == 4 %}
-                        <div class="interface-prestation-colonnes">
-                            <div id="arrosage" class="squelette-interface-prestation">
-                            <h3>{{categorie.name}}</h3>
-                            {# <ul class="menus-sous-cat">
-                                <li><a href="">arrosage</a></li>
-                                <li><a href="">taille</a></li>
-                                <li><a href="">débroussaillage</a></li>
-                                <li><a href="">plantations</a></li>
-                            </ul> #}
-
-                            </div>
-                    {% endif %}
-                    {% if loop.index == 5 %}
-                            <div id="creation" class="squelette-interface-prestation">
-                                <h3>{{categorie.name}}</h3>
-                                {# <ul class="menus-sous-cat">
-                                    <li><a href="">créations</a></li>
-                                    <li><a href="">plantations</a></li>
-                                    <li><a href="">entretiens</a></li>
-                                    <li><a href="">aménagements</a></li>
-                                </ul> #}
-                            </div>
-                        </div>
-                    {% endif %}
-
-                    {% if loop.index == 6 %}
-                        <div class="interface-prestation-colonnes">
-                            <div id="plantation" class="squelette-interface-prestation">
-                                <h3>{{categorie.name}}</h3>
-                                {# <ul class="menus-sous-cat">
-                                    <li><a href="">tonte</a></li>
-                                    <li><a href="">taille</a></li>
-                                    <li><a href="">désherbage</a></li>
-                                    <li><a href="">arrosage</a></li>
-                                </ul> #}
-                            </div>
-                    {% endif %} 
-                    {% if loop.index == 7 %}
-                            <div id="petit-travaux" class="squelette-interface-prestation">
-                                <h3>{{categorie.name}}</h3>
-                                {# <ul class="menus-sous-cat">
-                                    <li><a href="">taille</a></li>
-
-                                </ul> #}
-                            </div>
-                    {% endif %}
-                    {% if loop.index == 8 %}
-                            <div id="gestion-dechet" class="squelette-interface-prestation">
-                                <h3>{{categorie.name}}</h3>
-                                {# <ul class="menus-sous-cat">
-                                    <li><a href="">recyclage</a></li>
-                                    <li><a href="">produit</a></li>
-                                </ul> #}
-                            </div>
-                        </div>
-                    {% endif %}    
-                        
-                    
-                {% endfor %}
-
+				{% for categorie in categories %}
+					{% set categoryId = 'category-' ~ loop.index %}
+					<div class="interface-prestation-colonnes {{ categoryId }} ">
+						<div class="squelette-interface-prestation {{ 'category-' ~ categorie.name|lower|replace({' ': '-'}) }}">
+							<h3 class="categorie-title">{{ categorie.name }}</h3>
+							<ul class="menus-sous-cat">
+								{% for sousCategory in categorie.getSoucat|slice(0, 6) %}
+									<li>
+										<a href="">{{ sousCategory.name }}</a>
+									</li>
+								{% endfor %}
+							</ul>
+						</div>
+					</div>
+					{% if loop.index in [3, 5, 8] %}
+					</div>
+					<div id="interface-prestation">
+					{% endif %}
+				{% endfor %}
 			</div>
-
-
 		</section>
 
 

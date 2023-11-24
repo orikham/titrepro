@@ -82,5 +82,54 @@ window.addEventListener("scroll", function(){
 
 /**********JS-SECTION-PRESTATION**********/
 
+//animation des sous categorie au clic de la category 
+document.addEventListener("DOMContentLoaded", function(){
+  const categories = document.getElementsByClassName('categorie-title');
+  const sousCategories = document.getElementsByClassName('menus-sous-cat');
+
+  for (let i = 0; i < categories.length; i++) {
+    categories[i].addEventListener("mouseenter", function() {
+      fadeIn(sousCategories[i]);
+    });
+
+    categories[i].addEventListener("mouseleave", function() {
+      fadeOut(sousCategories[i]);
+    });
+  }
+});
+
+function fadeIn(element) {
+  element.style.display = 'flex';
+  let opacity = 0;
+
+  function increaseOpacity() {
+    if (opacity < 1) {
+      opacity += 0.3;
+      element.style.opacity = opacity;
+      requestAnimationFrame(increaseOpacity);
+    }
+  }
+
+  increaseOpacity();
+}
+
+function fadeOut(element) {
+  let opacity = 1;
+
+  function decreaseOpacity() {
+    if (opacity > 0) {
+      opacity -= 0.1;
+      element.style.opacity = opacity;
+      requestAnimationFrame(decreaseOpacity);
+    } else {
+      element.style.display = 'none';
+    }
+  }
+
+  decreaseOpacity();
+}
+
+
+
 
   

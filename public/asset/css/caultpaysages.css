@@ -464,9 +464,14 @@ button {
     }
   }
   /*section-prestation*/
+  #prestation {
+    display: flex;
+    justify-content: center;
+  }
   #prestation > #interface-prestation {
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
   }
   #prestation > #interface-prestation > .interface-prestation-colonnes {
@@ -481,10 +486,11 @@ button {
     margin: 25px;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
   }
-  #prestation > #interface-prestation > .interface-prestation-colonnes > .squelette-interface-prestation > h3 {
+  #prestation > #interface-prestation > .interface-prestation-colonnes > .squelette-interface-prestation > .categorie-title {
     padding: 10px;
+    margin-top: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -494,13 +500,20 @@ button {
     background-color: #f1f0f0;
     text-transform: capitalize;
     color: #89601e;
+    cursor: pointer;
+  }
+  #prestation > #interface-prestation > .interface-prestation-colonnes > .squelette-interface-prestation > .visible {
+    display: flex;
+    opacity: 1;
   }
   #prestation > #interface-prestation > .interface-prestation-colonnes > .squelette-interface-prestation > .menus-sous-cat {
     width: 100%;
-    display: flex;
+    display: none;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    transition: opacity 0.5s ease-in-out;
+    margin-bottom: 25px;
   }
   #prestation > #interface-prestation > .interface-prestation-colonnes > .squelette-interface-prestation > .menus-sous-cat > li {
     background-color: #367433;
@@ -517,36 +530,36 @@ button {
     color: #f1f0f0;
     text-transform: uppercase;
   }
-  #prestation > #interface-prestation > .interface-prestation-colonnes > #taille {
+  #prestation > #interface-prestation > .interface-prestation-colonnes > .category-taille {
     background-image: url(../img/prestation/taille.jpg);
     background-size: cover;
   }
-  #prestation > #interface-prestation > .interface-prestation-colonnes > #tonte {
+  #prestation > #interface-prestation > .interface-prestation-colonnes > .category-tonte {
     background-image: url(../img/prestation/tonte.jpg);
     background-size: cover;
   }
-  #prestation > #interface-prestation > .interface-prestation-colonnes > #desherbage {
+  #prestation > #interface-prestation > .interface-prestation-colonnes > .category-désherbage {
     background-image: url(../img/prestation/désherbage.jpg);
     background-size: cover;
   }
-  #prestation > #interface-prestation > .interface-prestation-colonnes > #arrosage {
+  #prestation > #interface-prestation > .interface-prestation-colonnes > .category-arrosage {
     background-image: url(../img/prestation/arrosage.jpg);
     background-size: cover;
     height: 450px;
   }
-  #prestation > #interface-prestation > .interface-prestation-colonnes > #creation {
+  #prestation > #interface-prestation > .interface-prestation-colonnes > .category-création {
     background-image: url(../img/prestation/creation.jpg);
     background-size: cover;
   }
-  #prestation > #interface-prestation > .interface-prestation-colonnes > #plantation {
+  #prestation > #interface-prestation > .interface-prestation-colonnes > .category-plantations {
     background-image: url(../img/prestation/plantations.jpg);
     background-size: cover;
   }
-  #prestation > #interface-prestation > .interface-prestation-colonnes > #petit-travaux {
+  #prestation > #interface-prestation > .interface-prestation-colonnes > .category-petits-travaux {
     background-image: url(../img/prestation/petittravaux.jpg);
     background-size: cover;
   }
-  #prestation > #interface-prestation > .interface-prestation-colonnes > #gestion-dechet {
+  #prestation > #interface-prestation > .interface-prestation-colonnes > .category-gestion-des-déchets {
     background-image: url(../img/prestation/gestion-des-dechets.jpg);
     background-size: cover;
   }

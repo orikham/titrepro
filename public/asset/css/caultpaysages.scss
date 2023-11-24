@@ -658,9 +658,12 @@ button {
 
     /*section-prestation*/
     #prestation{
+        display: flex;
+        justify-content: center;
         &>#interface-prestation{
             width: 100%;
             display: flex;
+            flex-direction: column;
             justify-content: space-evenly;
 
             &>.interface-prestation-colonnes{
@@ -675,10 +678,11 @@ button {
                     margin: 25px;
                     display: flex;
                     flex-direction: column;
-                    justify-content: space-evenly;
+                    justify-content: space-between;
 
-                    &>h3{    
+                    &>.categorie-title{    
                        padding: 10px;
+                       margin-top: 25px;
                         display: flex;
                         justify-content: center;
                         align-items: center;
@@ -688,14 +692,20 @@ button {
                         background-color: $fond;
                         text-transform: capitalize;
                         color: $cmarron;
+                        cursor: pointer;
                     }
-
+                    &>.visible {
+                        display: flex;
+                        opacity: 1;
+                    }
                     &>.menus-sous-cat{
                         width: 100%;
-                        display: flex;
+                        display: none;
                         flex-direction: row;
                         flex-wrap: wrap;
                         justify-content: space-evenly;
+                        transition: opacity 0.5s ease-in-out;
+                        margin-bottom: 25px;
 
                         &>li{
                             
@@ -717,27 +727,27 @@ button {
                     }
                 }
 
-                &>#taille{
+                &>.category-taille{
                    
                     background-image: url(../img/prestation/taille.jpg);
                     background-size: cover;
-
+    
                     
                 }
 
-                &>#tonte{
+                &>.category-tonte{
                     
                     background-image:url(../img/prestation/tonte.jpg);
                     background-size: cover;
                 }
 
-                &>#desherbage{
+                &>.category-désherbage{
                    
                     background-image:url(../img/prestation/désherbage.jpg);
                     background-size: cover;
                 }
         
-                &>#arrosage{
+                &>.category-arrosage{
                    
                     background-image: url(../img/prestation/arrosage.jpg);
                     background-size: cover;
@@ -746,13 +756,13 @@ button {
                     
                 }
 
-                &>#creation{
+                &>.category-création{
                     
                     background-image:url(../img/prestation/creation.jpg);
                     background-size: cover;
                 }            
          
-                &>#plantation{
+                &>.category-plantations{
                    
                     background-image: url(../img/prestation/plantations.jpg);
                     background-size: cover;
@@ -760,18 +770,20 @@ button {
                     
                 }
 
-                &>#petit-travaux{
+                &>.category-petits-travaux{
                     
                     background-image:url(../img/prestation/petittravaux.jpg);
                     background-size: cover;
                 }
 
-                &>#gestion-dechet{
+                &>.category-gestion-des-déchets{
                    
                     background-image:url(../img/prestation/gestion-des-dechets.jpg);
                     background-size: cover;
                 }
             }
+
+            
         }
     }
 
