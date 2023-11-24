@@ -29,6 +29,15 @@ class Category
     #[ORM\OneToMany(mappedBy: 'category', targetEntity: Articles::class)]
     private Collection $articles;
 
+    #[ORM\Column]
+    private ?bool $active = null;
+
+    #[ORM\Column(nullable: true)]
+    private ?\DateTimeImmutable $updateAt = null;
+
+    #[ORM\Column]
+    private ?\DateTimeImmutable $createdAt = null;
+
     public function __construct()
     {
         $this->soucat = new ArrayCollection();
@@ -117,6 +126,42 @@ class Category
                 $article->setCategory(null);
             }
         }
+
+        return $this;
+    }
+
+    public function isActive(): ?bool
+    {
+        return $this->active;
+    }
+
+    public function setActive(bool $active): static
+    {
+        $this->active = $active;
+
+        return $this;
+    }
+
+    public function getUpdateAt(): ?\DateTimeImmutable
+    {
+        return $this->updateAt;
+    }
+
+    public function setUpdateAt(?\DateTimeImmutable $updateAt): static
+    {
+        $this->updateAt = $updateAt;
+
+        return $this;
+    }
+
+    public function getCreatedAt(): ?\DateTimeImmutable
+    {
+        return $this->createdAt;
+    }
+
+    public function setCreatedAt(\DateTimeImmutable $createdAt): static
+    {
+        $this->createdAt = $createdAt;
 
         return $this;
     }

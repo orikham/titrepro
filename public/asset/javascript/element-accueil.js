@@ -96,38 +96,40 @@ document.addEventListener("DOMContentLoaded", function(){
       fadeOut(sousCategories[i]);
     });
   }
+
+  function fadeIn(element) {
+    element.style.display = 'flex';
+    let opacity = 0;
+  
+    function increaseOpacity() {
+      if (opacity < 1) {
+        opacity += 0.3;
+        element.style.opacity = opacity;
+        requestAnimationFrame(increaseOpacity);
+      }
+    }
+  
+    increaseOpacity();
+  }
+  
+  function fadeOut(element) {
+    let opacity = 1;
+  
+    function decreaseOpacity() {
+      if (opacity > 0) {
+        opacity -= 0.1;
+        element.style.opacity = opacity;
+        requestAnimationFrame(decreaseOpacity);
+      } else {
+        element.style.display = 'none';
+      }
+    }
+  
+    decreaseOpacity();
+  }
 });
 
-function fadeIn(element) {
-  element.style.display = 'flex';
-  let opacity = 0;
 
-  function increaseOpacity() {
-    if (opacity < 1) {
-      opacity += 0.3;
-      element.style.opacity = opacity;
-      requestAnimationFrame(increaseOpacity);
-    }
-  }
-
-  increaseOpacity();
-}
-
-function fadeOut(element) {
-  let opacity = 1;
-
-  function decreaseOpacity() {
-    if (opacity > 0) {
-      opacity -= 0.1;
-      element.style.opacity = opacity;
-      requestAnimationFrame(decreaseOpacity);
-    } else {
-      element.style.display = 'none';
-    }
-  }
-
-  decreaseOpacity();
-}
 
 
 
