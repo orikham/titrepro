@@ -24,7 +24,7 @@ class Articles
     #[ORM\Column(length: 255)]
     private ?string $lieu = null;
 
-    #[ORM\OneToMany(mappedBy: 'articles', targetEntity: Pictures::class)]
+    #[ORM\OneToMany(mappedBy: 'articles', targetEntity: Pictures::class,cascade:["persist"])]
     private Collection $picture;
 
     #[ORM\ManyToOne(inversedBy: 'articles')]

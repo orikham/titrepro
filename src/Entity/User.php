@@ -55,6 +55,11 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
         return $this;
     }
+// Dans la classe User
+    public function __toString()
+    {
+        return $this->getEmail(); // Ou toute autre représentation que vous souhaitez afficher
+    }
 
     /**
      * A visual identifier that represents this user.

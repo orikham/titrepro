@@ -165,4 +165,9 @@ class Category
 
         return $this;
     }
+
+    public function __toString()
+    {
+        return $this->name ?? ''; // Utilisez le nom de la catégorie comme représentation en chaîne de caractères, ou une chaîne vide s'il est nul
+    }
 }
