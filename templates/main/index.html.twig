@@ -1,151 +1,135 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}CaultPaysages | Accueil
+{% block title %}
+    CaultPaysages | Accueil
 {% endblock %}
 
 {% block body %}
-	{% block content %}
-		<!-- Fil d'Ariane -->
-		<nav aria-label="Fil d'Ariane">
-			<ol>
-				<li><ahref="{{path('app_home_page')}}">Accueil</a></li>
-			</ol>
-		</nav>
-
-		<section id="accueil" class="row-limit-size">
-			<div class="carousel-content">
-
-				<div class="carouselItem first-child">
-					<video id="slide1" autoplay loop muted>
-						<source src="{{ asset('asset/img/accueil/sliders-accueil/slide-1/gazon.mp4') }}" alt="" type="video/mp4">
-					</video>
-
-					<aside>
-						{% for picture in pictures['logo'] %}
-							<img class="logo" src="{{ asset('asset/img/') ~ picture.title }}" alt="logo du site">
-						{% endfor %}
-
-						<h3>{{ Category[0].name }},
-							{{ Category[1].name }},
-							{{ Category[2].name }},
-							{{ Category[3].name }}</h3>
-						<h3>{{ infosContact[0].ville }}</h3>
-						<p>{{ infosContact[0].accroche }}</p>
-					</aside>
-				</div>
-
-				<div class="carouselItem second-child">
-					<div id="slide2">
-						{% for picture in pictures['cover'] %}
-
-							{% if loop.index == 1 %}
-								<div id="slide2-left">
-									<img src="{{ asset('asset/img/accueil/sliders-accueil/slide-2/' ~ picture.title) }}" alt="">
-
-								{% endif %}
-								{% if loop.index == 2 %}
-									<img src="{{ asset('asset/img/accueil/sliders-accueil/slide-2/' ~ picture.title) }}" alt="">
-								</div>
-							{% endif %}
-
-							{% if loop.index == 3 %}
-								<div id="slide2-middle">
-									<img src="{{ asset('asset/img/accueil/sliders-accueil/slide-2/' ~ picture.title) }}" alt="">
-								</div>
-							{% endif %}
-
-							{% if loop.index == 4 %}
-								<div id="slide2-right">
-									<img src="{{ asset('asset/img/accueil/sliders-accueil/slide-2/' ~ picture.title) }}" alt="">
-								{% endif %}
-								{% if loop.index == 5 %}
-								
-									<img src="{{ asset('asset/img/accueil/sliders-accueil/slide-2/' ~ picture.title) }}" alt="">
-								</div>	
-							{% endif %}
-						{% endfor %}
-
-					</div>
-				</div>
-
-				<div class="carouselItem last-child">
-					<div id="slide3">
-						<div id="fond-contact-gauche"></div>
-						<div id="contnair-contact">
-							<div id="plaquette-contact">
-								<h4 id="p1">Prise de RDV, demande d'informations</h4>
-								<div id="grande-div">
-									<div id="lien-contact">
-										<div id="phone">
-											<svg id="svg-phone" xmlns="http://www.w3.org/2000/svg" height="1em" viewbox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>
-													#svg-phone {
-														fill: #ffffff
-													}
-												</style><path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm90.7 96.7c9.7-2.6 19.9 2.3 23.7 11.6l20 48c3.4 8.2 1 17.6-5.8 23.2L168 231.7c16.6 35.2 45.1 63.7 80.3 80.3l20.2-24.7c5.6-6.8 15-9.2 23.2-5.8l48 20c9.3 3.9 14.2 14 11.6 23.7l-12 44C336.9 378 329 384 320 384C196.3 384 96 283.7 96 160c0-9 6-16.9 14.7-19.3l44-12z"/></svg>
-
-											<div class="petite-div-contact">
-												<h5>Me contacter</h5>
-												<a href="tel:+{{ infosContact[0].phone }}">{{ infosContact[0].phone }}</a>
-
-											</div>
-
-
-										</div>
-										<div id="mail">
-											<svg id="svg-mail" xmlns="http://www.w3.org/2000/svg" height="1em" viewbox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>
-													#svg-mail {
-														fill: #ffffff
-													}
-												</style><path d="M256 64C150 64 64 150 64 256s86 192 192 192c17.7 0 32 14.3 32 32s-14.3 32-32 32C114.6 512 0 397.4 0 256S114.6 0 256 0S512 114.6 512 256v32c0 53-43 96-96 96c-29.3 0-55.6-13.2-73.2-33.9C320 371.1 289.5 384 256 384c-70.7 0-128-57.3-128-128s57.3-128 128-128c27.9 0 53.7 8.9 74.7 24.1c5.7-5 13.1-8.1 21.3-8.1c17.7 0 32 14.3 32 32v80 32c0 17.7 14.3 32 32 32s32-14.3 32-32V256c0-106-86-192-192-192zm64 192a64 64 0 1 0 -128 0 64 64 0 1 0 128 0z"/></svg>
-
+    {% block content %}
+        <section id="accueil" class="row-limit-size"> 
+            <div class="carousel-content">
+                <div class="carouselItem first-child">
+                    <video id="slide1" autoplay loop muted>
+                        <source src="{{ asset('asset/img/accueil/sliders-accueil/slide-1/gazon.mp4') }}" alt="" type="video/mp4">
+                    </video>
+                    <aside>
+                        {% for picture in pictures['logo'] %}
+                            <img class="logo" src="{{ asset('asset/img/') ~ picture.title }}" alt="logo du site">
+                        {% endfor %}
+                        <h3>{{ Category[0].name }},
+                            {{ Category[1].name }},
+                            {{ Category[2].name }},
+                            {{ Category[3].name }}</h3>
+                        <h3>{{ infosContact[0].ville }}</h3>
+                        <p>{{ infosContact[0].accroche }}</p>
+                    </aside>
+                </div>
+                <div class="carouselItem second-child">
+                    {# <div id="slide2">
+                        {% for picture in pictures['cover'] %}
+                            {% if loop.index == 1 %}
+                                <div id="slide2-left">
+                                    <img src="{{ asset('asset/img/accueil/sliders-accueil/slide-2/' ~ picture.title) }}" alt="">
+                                {% endif %}
+                            {% if loop.index == 2 %}
+                                <img src="{{ asset('asset/img/accueil/sliders-accueil/slide-2/' ~ picture.title) }}" alt="">
+                                </div>
+                            {% endif %}
+                            {% if loop.index == 3 %}
+                                <div id="slide2-middle">
+                                    <img src="{{ asset('asset/img/accueil/sliders-accueil/slide-2/' ~ picture.title) }}" alt="">
+                                </div>
+                            {% endif %}
+                            {% if loop.index == 4 %}
+                                <div id="slide2-right">
+                                    <img src="{{ asset('asset/img/accueil/sliders-accueil/slide-2/' ~ picture.title) }}" alt="">
+                                {% endif %}
+                            {% if loop.index == 5 %}
+                                <img src="{{ asset('asset/img/accueil/sliders-accueil/slide-2/' ~ picture.title) }}" alt="">
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    </div> #}
+                </div>
+                <div class="carouselItem last-child">
+                    <div id="slide3">
+                        <div id="fond-contact-gauche"></div>
+                        <div id="contnair-contact">
+                            <div id="plaquette-contact">
+                                <h4 id="p1">Prise de RDV, demande d'informations</h4>
+                                <div id="grande-div">
+                                    <div id="lien-contact">
+                                        <div id="phone">
+                                            <svg id="svg-phone" xmlns="http://www.w3.org/2000/svg" height="1em" viewbox="0 0 448 512">
+                                                <style>
+                                                    #svg-phone {
+                                                        fill: #ffffff
+                                                    }
+                                                </style>
+                                                <path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm90.7 96.7c9.7-2.6 19.9 2.3 23.7 11.6l20 48c3.4 8.2 1 17.6-5.8 23.2L168 231.7c16.6 35.2 45.1 63.7 80.3 80.3l20.2-24.7c5.6-6.8 15-9.2 23.2-5.8l48 20c9.3 3.9 14.2 14 11.6 23.7l-12 44C336.9 378 329 384 320 384C196.3 384 96 283.7 96 160c0-9 6-16.9 14.7-19.3l44-12z"/>
+                                            </svg>
+                                            <div class="petite-div-contact">
+                                                <h5>Me contacter</h5>
+                                                <a href="tel:+{{ infosContact[0].phone }}">{{ infosContact[0].phone }}</a>
+                                            </div>
+                                        </div>
+                                        <div id="mail">
+                                            <svg id="svg-mail" xmlns="http://www.w3.org/2000/svg" height="1em" viewbox="0 0 512 512">
+                                                <style>
+                                                    #svg-mail {
+                                                        fill: #ffffff
+                                                    }
+                                                </style>
+                                                <path d="M256 64C150 64 64 150 64 256s86 192 192 192c17.7 0 32 14.3 32 32s-14.3 32-32 32C114.6 512 0 397.4 0 256S114.6 0 256 0S512 114.6 512 256v32c0 53-43 96-96 96c-29.3 0-55.6-13.2-73.2-33.9C320 371.1 289.5 384 256 384c-70.7 0-128-57.3-128-128s57.3-128 128-128c27.9 0 53.7 8.9 74.7 24.1c5.7-5 13.1-8.1 21.3-8.1c17.7 0 32 14.3 32 32v80 32c0 17.7 14.3 32 32 32s32-14.3 32-32V256c0-106-86-192-192-192zm64 192a64 64 0 1 0 -128 0 64 64 0 1 0 128 0z"/>
+                                            </svg>
+                                        
 											<div class="petite-div-contact">
 												<h5>M'écrire</h5>
 												<a href="mailto:{{ infosContact[0].email }}">{{ infosContact[0].email }}</a>
-
 											</div>
-										</div>
-
-									</div>
-									<div id="logo-bis">
-										{% for picture in pictures['logo'] %}
-											<img class="logo" src="{{ asset('asset/img/') ~ picture.title }}" alt="logo du site">
-										{% endfor %}
-										<div id="adresse-responsive">
-											<h4>Cault<span>Paysages</span>
-											</h4>
-											<p>Paysagiste</p>
-											<p>361 Rue du Mas Peguet</p>
-											<p>01120 Pizay</p>
-
-										</div>
-									</div>
+                                    	</div>
+									</div> 
+									 <div id="logo-bis">
+                                    {% for picture in pictures['logo'] %}
+                                        <img class="logo" src="{{ asset('asset/img/') ~ picture.title }}" alt="logo du site">
+                                    {% endfor %}
 								</div>
-								<p id="p2">{{ infosContact[0].accroche }}
-								</p>
-							</div>
-						</div>
-						<div id="fond-contact-droite"></div>
-					</div>
-				</div>
-
-			</div>
-
-			<div id="bouton-slider-accueil">
-				<div id="bouton-gauche">Précédent</div>
-				<div id="bouton-droit">Suivant</div>
-			</div>
-
-			<div id="presentation">
-				<div id="bio">
-					<p id="prez">{{ infosContact[0].presentation }}</p>
-				</div>
-				<div id="illustrations">
-					<div id="illustration-presentation-haut"><img src="{{ asset('asset/img/accueil/presentation/img-prez-1.jpeg') }}" alt=""><img src="{{ asset('asset/img/accueil/presentation/img-prez-2.jpeg') }}" alt=""></div>
-					<div id="cubix"></div>
-					<div id="illustration-presentation-bas"><img src="{{ asset('asset/img/accueil/presentation/img-prez-3.jpeg') }}" alt=""></div>
-				</div>
-
-			</div>
-		</section>
-	{% endblock %}
+                                </div>
+								<p id="p2">{{ infosContact[0].sollicitation }}</p>
+                               
+                                    {# <div id="adresse-responsive">
+                                        <h4>Cault<span>Paysages</span></h4>
+                                        <p>Paysagiste</p>
+                                        <p>361 Rue du Mas Peguet</p>
+                                        <p>01120 Pizay</p>
+                                    </div> #}
+                                
+                            </div>
+                           
+                        </div>
+                        <div id="fond-contact-droite"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="bouton-slider-accueil">
+                <div id="bouton-gauche">Précédent</div>
+                <div id="bouton-droit">Suivant</div>
+            </div>
+            <div id="presentation">
+                <div id="bio">
+                    <p id="prez">{{ infosContact[0].presentation }}</p>
+                </div>
+                <div id="illustrations">
+                    <div id="illustration-presentation-haut">
+                        <img src="{{ asset('asset/img/accueil/presentation/img-prez-1.png') }}" alt="">
+                        <img src="{{ asset('asset/img/accueil/presentation/img-prez-2.png') }}" alt="">
+                    </div>
+                    <div id="cubix"></div>
+                    <div id="illustration-presentation-bas">
+                        <img src="{{ asset('asset/img/accueil/presentation/img-prez-3.png') }}" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+    {% endblock %}
 {% endblock %}

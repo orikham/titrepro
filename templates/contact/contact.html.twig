@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}CaultPaysages | Contact
+{% endblock %}
+
+{% block body %}
+	{% block content %}
+    
+    <section id="contact" class="row-limit-size">
+    
+        <div id="carte-de-visite">
+				<div id="partie1">
+					 <h4>{{infosContact[0].name }}</h4>
+				
+					<p>{{ infosContact[0].adresse }}</p>
+					<p>{{ infosContact[0].codePostal }}
+						{{ infosContact[0].ville }}
+					</p>
+					<p>tél:
+						{{ infosContact[0].phone }}</p> 
+						
+				</div>
+
+				
+					 <p>{{infosContact[0].horaires }}</p> 
+					
+				
+
+				
+		</div>
+    
+    </section>
+    
+    {% endblock %}
+{% endblock %}

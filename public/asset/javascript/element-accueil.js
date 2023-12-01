@@ -129,6 +129,27 @@ document.addEventListener("DOMContentLoaded", function(){
   }
 });
 
+/* public/js/cookie-banner.js */
+// import Cookies from 'js-cookie';
+
+// document.addEventListener('DOMContentLoaded', function() {
+//     // Vérifier si l'utilisateur a déjà accepté les cookies
+//     const hasConsent = Cookies.get('cookie-consent');
+
+//     // Afficher la bannière d'avis de cookie uniquement si le consentement n'a pas déjà été donné
+//     if (!hasConsent) {
+//         document.getElementById('cookie-banner').classList.remove('hidden');
+//     }
+
+//     // Ajouter un gestionnaire d'événements pour le bouton d'acceptation
+//     document.getElementById('accept-cookies').addEventListener('click', function() {
+//         // Cacher la bannière
+//         document.getElementById('cookie-banner').classList.add('hidden');
+//         // Stocker le consentement dans un cookie valable pendant une certaine période
+//         Cookies.set('cookie-consent', 'true', { expires: 365 });
+//     });
+// });
+
 
 
 

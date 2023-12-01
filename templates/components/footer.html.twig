@@ -31,15 +31,21 @@
 				</div>
 			</div>
 			<div id="mentions">
-				<h6>&copy 2023 CaultPaysages</h6><img src="{{ asset('asset/img/icone/footer/icone-espace-footer.png') }}" alt="">
+				<a href="{{ path('app_login') }}"><h6>&copy 2023 CaultPaysages</h6></a><img src="{{ asset('asset/img/icone/footer/icone-espace-footer.png') }}" alt="">
 				<a href="">Mentions légales</a><img src="{{ asset('asset/img/icone/footer/icone-espace-footer.png') }}" alt="">
 				<a href="">Protection de la vie privée</a><img src="{{ asset('asset/img/icone/footer/icone-espace-footer.png') }}" alt="">
 				<a href="">Cookies</a><img src="{{ asset('asset/img/icone/footer/icone-espace-footer.png') }}" alt="">
+				
 				<p id="copyright">site réalisé par Orikham</p>
 
 
 			</div>
 		</div>
+
+		<div id="cookie-banner" class="hidden">
+        <p>Nous utilisons des cookies pour améliorer votre expérience sur notre site. En continuant à naviguer, vous acceptez notre utilisation de cookies.</p>
+        <button id="accept-cookies">J'accepte</button>
+    	</div>
 
 	</footer>
 {% endblock %}

@@ -99,6 +99,10 @@ class DashboardController extends AbstractDashboardController
                 MenuItem::linkToCrud('Liste des infos', 'fas fa-eye', InfosContact::class),
                 MenuItem::linkToCrud('Modifier les infos', 'fas fa-edit', InfosContact::class)->setAction(Crud::PAGE_EDIT)
             ]);
+
+
+            yield MenuItem::linktoRoute('Retourner sur le site', 'fa fa-home', ('app_home_page') );
+
         // yield MenuItem::linkToCrud('The Label', 'fas fa-list', EntityClass::class);
     }
 }

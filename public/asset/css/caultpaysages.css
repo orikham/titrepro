@@ -78,6 +78,35 @@ button {
     justify-content: space-around;
     align-items: center;
     background-color: #f1f0f0;
+    /* public/css/cookie-banner.css */
+  }
+  footer > #cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  footer > #cookie-banner > p {
+    margin: 0;
+    flex-grow: 1;
+  }
+  footer > #cookie-banner > #accept-cookies {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
   }
   footer > #footer-droit {
     width: 75%;
