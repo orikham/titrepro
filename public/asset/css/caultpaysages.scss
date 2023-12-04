@@ -942,11 +942,62 @@ button {
             }
 
             &>fieldset{
+                background-color: $cmarron;
 
                 &>#formulaire{
                     display: flex;
                     justify-content: space-evenly;
                     margin: 25px;
+
+                    &>#mail{
+                        
+                        display: flex;
+                        justify-content: space-around;
+                        margin: 25px;
+
+                        &>label{
+                            color: white;
+                            display: flex;
+                            align-items: center;
+                            margin-right: 5px;
+                        }
+
+                        &>input{
+                            height: 25px;
+                            border-radius: 150px;
+
+                        }
+                    }
+
+                    &>#pass{
+                        
+                        display: flex;
+                        justify-content: space-around;
+                        margin: 25px;
+
+                        &>label{
+                            color: white;
+                            display: flex;
+                            align-items: center;
+                            margin-right: 5px;
+                        }
+
+                        &>input{
+                            height: 25px;
+                            border-radius: 150px;
+
+                        }
+                    }
+                }
+
+                &>button{
+                    border: 1px solid white;
+                    background-color: green;
+                    color: white;
+                    padding: 10px;
+                    border-radius: 100px;
+                    display: flex;
+                    margin: 10px auto;
                 }
             }
         }
