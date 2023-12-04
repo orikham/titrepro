@@ -4,6 +4,11 @@ $noirounet : #020202;
 $fond : #f1f0f0;
 $cardSlide : #d9d9d9;
 
+
+@font-face{
+    font-family: 'jardin';
+    src: url(./Jardin\ des\ Bermudes.ttf);
+}
 /******RESET*****/
 * {
     margin: 0;
@@ -112,8 +117,8 @@ button {
         /* public/css/cookie-banner.css */
         &>#cookie-banner {
             position: fixed;
+            top: 800px;
             bottom: 0;
-            left: 0;
             width: 100%;
             background-color: #333;
             color: #fff;
@@ -919,6 +924,31 @@ button {
             }
 
             
+        }
+    }
+
+    /*section-Admin-login*/
+    #admin-login{
+        &>form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &>#titre-admin{
+                font-size: 5rem;
+                font-family: jardin;
+                color: $cvert;
+                text-transform:capitalize;
+            }
+
+            &>fieldset{
+
+                &>#formulaire{
+                    display: flex;
+                    justify-content: space-evenly;
+                    margin: 25px;
+                }
+            }
         }
     }
 

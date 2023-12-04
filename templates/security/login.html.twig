@@ -6,7 +6,7 @@
 
 {% block body %}
 	{% block content %}
-		<section id="Admin-login" class="row-limit-size">
+		<section id="admin-login" class="row-limit-size">
 
 			<form method="post">
                 
@@ -16,12 +16,11 @@
 
                     {% if app.user %}
                         <div class="mb-3">
-                            Vous êtes déjà connecter. 
-                           
+                            Vous êtes déjà connecter.           
                         </div>
                     {% endif %}
                 
-				<h1 class="h3 font-weight-normal">éspace administration pour continuer veuillez vous identifier</h1>
+				<h1 id="titre-admin">éspace administration pour continuer veuillez vous identifier</h1>
                 <fieldset>
                     <div id="formulaire">
                         <div id="mail">

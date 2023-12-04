@@ -24,33 +24,33 @@
                         <p>{{ infosContact[0].accroche }}</p>
                     </aside>
                 </div>
-                <div class="carouselItem second-child">
-                    {# <div id="slide2">
-                        {% for picture in pictures['cover'] %}
-                            {% if loop.index == 1 %}
-                                <div id="slide2-left">
-                                    <img src="{{ asset('asset/img/accueil/sliders-accueil/slide-2/' ~ picture.title) }}" alt="">
-                                {% endif %}
-                            {% if loop.index == 2 %}
-                                <img src="{{ asset('asset/img/accueil/sliders-accueil/slide-2/' ~ picture.title) }}" alt="">
-                                </div>
-                            {% endif %}
-                            {% if loop.index == 3 %}
-                                <div id="slide2-middle">
-                                    <img src="{{ asset('asset/img/accueil/sliders-accueil/slide-2/' ~ picture.title) }}" alt="">
-                                </div>
-                            {% endif %}
-                            {% if loop.index == 4 %}
-                                <div id="slide2-right">
-                                    <img src="{{ asset('asset/img/accueil/sliders-accueil/slide-2/' ~ picture.title) }}" alt="">
-                                {% endif %}
-                            {% if loop.index == 5 %}
-                                <img src="{{ asset('asset/img/accueil/sliders-accueil/slide-2/' ~ picture.title) }}" alt="">
-                                </div>
-                            {% endif %}
-                        {% endfor %}
-                    </div> #}
-                </div>
+                {# <div class="carouselItem second-child">
+                    <div id="slide2">
+						{% for picture in pictures['cover'] %}
+							{% if loop.index == 1 %}
+								<div id="slide2-left">
+									<img src="{{ asset('asset/img/accueil/sliders-accueil/slide-2/' ~ picture.title) }}" alt="">
+									{% elseif loop.index == 2 %}
+									<img src="{{ asset('asset/img/accueil/sliders-accueil/slide-2/' ~ picture.title) }}" alt="">
+								</div>
+						
+						
+							{% elseif loop.index == 3 %}
+								<div id="slide2-middle">
+									<img src="{{ asset('asset/img/accueil/sliders-accueil/slide-2/' ~ picture.title) }}" alt="">
+								</div>
+							{% elseif loop.index == 4 %}
+								<div id="slide2-right">
+									<img src="{{ asset('asset/img/accueil/sliders-accueil/slide-2/' ~ picture.title) }}" alt="">
+									{% elseif loop.index == 5 %}
+								<img src="{{ asset('asset/img/accueil/sliders-accueil/slide-2/' ~ picture.title) }}" alt="">
+								</div>
+							
+							{% endif %}
+						{% endfor %}
+					</div>
+
+                </div> #}
                 <div class="carouselItem last-child">
                     <div id="slide3">
                         <div id="fond-contact-gauche"></div>

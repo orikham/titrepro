@@ -41,7 +41,7 @@ class ArticlesCrudController extends AbstractCrudController
                 CollectionField::new('picture')
                 ->setLabel('Images')
                 ->setEntryType(PicturesFormType::class) // Utiliser le type de formulaire dédié pour Pictures
-                ->setFormTypeOption('by_reference', false) // Assurez-vous que la relation est bien gérée par référence
+                ->setFormTypeOption('by_reference', true) // Assurez-vous que la relation est bien gérée par référence
                 ->onlyOnForms(),
 
             AssociationField::new('category'),
