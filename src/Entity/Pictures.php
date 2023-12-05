@@ -22,6 +22,9 @@ class Pictures
     #[ORM\ManyToOne(inversedBy: 'picture')]
     private ?Articles $articles = null;
 
+    #[ORM\Column(length: 255)]
+    private ?string $field = null;
+
     
 
     public function getId(): ?int
@@ -68,6 +71,18 @@ class Pictures
     public function __toString()
     {
         return $this->title ?? ''; 
+    }
+
+    public function getField(): ?string
+    {
+        return $this->field;
+    }
+
+    public function setField(string $field): static
+    {
+        $this->field = $field;
+
+        return $this;
     }
     
 }

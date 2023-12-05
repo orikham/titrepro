@@ -947,11 +947,13 @@ button {
         }
 
         &>#form-container{
+            width: 90%;
             border: 5px solid $cmarron;
             display: flex;
             flex-direction: column;
             padding: 10px;
             background-color:$cmarron;
+            margin: auto;
 
             &>h3{
                 margin: auto;

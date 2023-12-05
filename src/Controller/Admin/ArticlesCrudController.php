@@ -11,7 +11,6 @@ use EasyCorp\Bundle\EasyAdminBundle\Field\BooleanField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\CollectionField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\DateTimeField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
-use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 use App\Form\PicturesFormType;
@@ -32,17 +31,10 @@ class ArticlesCrudController extends AbstractCrudController
             TextEditorField::new('contenu'),
             TextField::new('lieu'),
 
-            ImageField::new('picture')
-                ->setLabel('Image')
-                ->setUploadDir('public/asset/img') // Remplacez 'asset/img' par le répertoire de téléchargement souhaité
-                ->setBasePath('public/asset/img') // Ajoutez cette ligne si vous souhaitez afficher les images après le téléchargement
-                ->onlyOnForms(),
-
-                CollectionField::new('picture')
-                ->setLabel('Images')
-                ->setEntryType(PicturesFormType::class) // Utiliser le type de formulaire dédié pour Pictures
-                ->setFormTypeOption('by_reference', true) // Assurez-vous que la relation est bien gérée par référence
-                ->onlyOnForms(),
+            CollectionField::new('picture', 'Images')
+            ->setEntryType(PicturesFormType::class)
+            ->setFormTypeOption('by_reference', false)
+            ->onlyOnForms(),
 
             AssociationField::new('category'),
             BooleanField::new('active'),
@@ -56,19 +48,14 @@ class ArticlesCrudController extends AbstractCrudController
         if ($entityInstance instanceof Articles) {
             $pictures = $entityInstance->getPicture();
 
-            /** @var Pictures $picture */
             foreach ($pictures as $picture) {
-                $uploadedFile = $picture->getArticles();
+                $uploadedFile = $picture->getField(); 
 
                 if ($uploadedFile instanceof UploadedFile) {
-                    // Gérer la logique de téléchargement du fichier ici
                     $fileName = md5(uniqid()) . '.' . $uploadedFile->guessExtension();
-                    $uploadedFile->move($this->getParameter('images_directory'), $fileName);
+                    $uploadedFile->move($this->getParameter('kernel.project_dir').'public/asset/img', $fileName);
 
-                    // Enregistrez le nom du fichier dans l'entité Pictures
                     $picture->setTitle($fileName);
-
-                    // Associez l'article à la nouvelle instance de Picture
                     $picture->setArticles($entityInstance);
 
                     $em->persist($picture);
@@ -76,10 +63,9 @@ class ArticlesCrudController extends AbstractCrudController
             }
         }
 
-        //$em->persist($picture);
         $entityInstance->setCreatedAt(new \DateTime());
-
         $em->persist($entityInstance);
+        $em->flush(); // N'oubliez pas de flush pour persister les modifications
     }
 
     
