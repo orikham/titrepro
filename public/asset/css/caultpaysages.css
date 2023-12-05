@@ -3,6 +3,18 @@
   font-family: "jardin";
   src: url(./Jardin\ des\ Bermudes.ttf);
 }
+@font-face {
+  font-family: "title-contact";
+  src: url(./Roboto-Bold.ttf);
+}
+@font-face {
+  font-family: "para-contact";
+  src: url(./Roboto-Regular.ttf);
+}
+@font-face {
+  font-family: "label-contact";
+  src: url(./Roboto-Condensed.ttf);
+}
 /******RESET*****/
 * {
   margin: 0;
@@ -105,7 +117,6 @@ button {
     background-color: #4CAF50;
     color: white;
     border: none;
-    padding: 10px 20px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -172,6 +183,65 @@ button {
   footer > #footer-droit > #mentions > img {
     width: 20px;
     height: 20px;
+  }
+  /*section-Admin-login*/
+  #admin-login > form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #admin-login > form > #titre-admin {
+    font-size: 5rem;
+    font-family: jardin;
+    color: #367433;
+    text-transform: capitalize;
+  }
+  #admin-login > form > fieldset {
+    background-color: #89601e;
+  }
+  #admin-login > form > fieldset > #formulaire {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 25px;
+  }
+  #admin-login > form > fieldset > #formulaire > #mail {
+    display: flex;
+    justify-content: space-around;
+    margin: 25px;
+  }
+  #admin-login > form > fieldset > #formulaire > #mail > label {
+    color: white;
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+  }
+  #admin-login > form > fieldset > #formulaire > #mail > input {
+    height: 25px;
+    border-radius: 150px;
+  }
+  #admin-login > form > fieldset > #formulaire > #pass {
+    display: flex;
+    justify-content: space-around;
+    margin: 25px;
+  }
+  #admin-login > form > fieldset > #formulaire > #pass > label {
+    color: white;
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+  }
+  #admin-login > form > fieldset > #formulaire > #pass > input {
+    height: 25px;
+    border-radius: 150px;
+  }
+  #admin-login > form > fieldset > button {
+    border: 1px solid white;
+    background-color: green;
+    color: white;
+    padding: 10px;
+    border-radius: 100px;
+    display: flex;
+    margin: 10px auto;
   }
   /*section-accueil*/
   #accueil > .carousel-content {
@@ -596,144 +666,103 @@ button {
     background-image: url(../img/prestation/gestion-des-dechets.jpg);
     background-size: cover;
   }
-  /*section-paysagisme*/
-  #paysagisme > #derniers-articles {
-    width: 100%;
+  /*section contact*/
+  #contact {
+    background-image: url("../img/branche-fond.png");
+  }
+  #contact > #carte-de-visite {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    margin: 25px;
   }
-  #paysagisme > #derniers-articles > .article-card {
-    width: 300px;
-    margin: 10px;
-    border: 1px solid #367433;
-    border-radius: 25px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-shadow: 1px 1px 10px 10px #89601e;
-  }
-  #paysagisme > #derniers-articles > .article-card > h3 {
-    padding: 5px;
-    color: #367433;
-    font-size: 1.4rem;
-  }
-  #paysagisme > #derniers-articles > .article-card > h4 {
-    padding: 5px;
-    color: #367433;
-    font-size: 1.3rem;
-  }
-  #paysagisme > #derniers-articles > .article-card > img {
-    width: 300px;
-    border-radius: 10px;
-  }
-  #paysagisme > #derniers-articles > .article-card > .bouton-voir {
+  #contact > #carte-de-visite > .stylbox {
     margin: 5px;
-    padding: 5px;
-    color: white;
-    border-radius: 100px;
-    background-color: #367433;
-    font-size: 1.2rem;
-  }
-  /*section-paysagisme*/
-  #amenagement > #derniers-articles-amenagement {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-  }
-  #amenagement > #derniers-articles-amenagement > .amenagement-article-card {
-    width: 300px;
-    margin: 10px;
-    border: 1px solid #367433;
-    border-radius: 25px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-shadow: 1px 1px 10px 10px #89601e;
-  }
-  #amenagement > #derniers-articles-amenagement > .amenagement-article-card > h3 {
-    padding: 5px;
-    color: #367433;
-    font-size: 1.4rem;
-  }
-  #amenagement > #derniers-articles-amenagement > .amenagement-article-card > h4 {
-    padding: 5px;
-    color: #367433;
-    font-size: 1.3rem;
-  }
-  #amenagement > #derniers-articles-amenagement > .amenagement-article-card > img {
-    width: 300px;
-    border-radius: 10px;
-  }
-  #amenagement > #derniers-articles-amenagement > .amenagement-article-card > .bouton-voir {
-    margin: 5px;
-    padding: 5px;
-    color: white;
-    border-radius: 100px;
-    background-color: #367433;
-    font-size: 1.2rem;
-  }
-  /*section-Admin-login*/
-  #admin-login > form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  #admin-login > form > #titre-admin {
-    font-size: 5rem;
-    font-family: jardin;
-    color: #367433;
-    text-transform: capitalize;
-  }
-  #admin-login > form > fieldset {
+    border: 5px solid #367433;
     background-color: #89601e;
   }
-  #admin-login > form > fieldset > #formulaire {
+  #contact > #carte-de-visite > .stylbox > h4 {
+    color: white;
+    font-size: 1.3rem;
+    font-family: "title-contact";
+    padding: 10px;
+  }
+  #contact > #carte-de-visite > .stylbox > p {
+    font-size: 1rem;
+    font-family: "para-contact";
+    padding: 10px;
+  }
+  #contact > #form-container {
+    border: 5px solid #89601e;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: #89601e;
+  }
+  #contact > #form-container > h3 {
+    margin: auto;
+    color: white;
+    font-size: 2rem;
+  }
+  #contact > #form-container > .form-group {
     display: flex;
     justify-content: space-evenly;
-    margin: 25px;
+    margin: 10px;
+    padding: 15px;
+    background-color: #367433;
   }
-  #admin-login > form > fieldset > #formulaire > #mail {
-    display: flex;
-    justify-content: space-around;
-    margin: 25px;
+  #contact > #form-container > .form-group > .box1 > label, #contact > #form-container > .form-group .box2 > label {
+    margin: 5px;
+    color: #f1f0f0;
+    font-size: 1.3rem;
+    font-family: "label-contact";
   }
-  #admin-login > form > fieldset > #formulaire > #mail > label {
-    color: white;
-    display: flex;
-    align-items: center;
-    margin-right: 5px;
-  }
-  #admin-login > form > fieldset > #formulaire > #mail > input {
+  #contact > #form-container > .form-group > .box1 > input, #contact > #form-container > .form-group .box2 > input {
+    margin: 5px;
+    width: 200px;
     height: 25px;
     border-radius: 150px;
   }
-  #admin-login > form > fieldset > #formulaire > #pass {
+  #contact > #form-container > #form-mess {
     display: flex;
-    justify-content: space-around;
-    margin: 25px;
-  }
-  #admin-login > form > fieldset > #formulaire > #pass > label {
-    color: white;
-    display: flex;
+    flex-direction: column;
+    background-color: #367433;
+    margin: 10px;
     align-items: center;
-    margin-right: 5px;
   }
-  #admin-login > form > fieldset > #formulaire > #pass > input {
+  #contact > #form-container > #form-mess > #objet {
+    padding: 15px;
+  }
+  #contact > #form-container > #form-mess > #objet > label {
+    color: #f1f0f0;
+    font-size: 1.3rem;
+    font-family: "label-contact";
+  }
+  #contact > #form-container > #form-mess > #objet > input {
+    width: 700px;
     height: 25px;
-    border-radius: 150px;
   }
-  #admin-login > form > fieldset > button {
+  #contact > #form-container > #form-mess > #message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #contact > #form-container > #form-mess > #message > label {
+    padding: 15px;
+    color: #f1f0f0;
+    font-size: 1.3rem;
+    font-family: "label-contact";
+  }
+  #contact > #form-container > #form-mess > #message > textarea {
+    width: 1000px;
+    min-height: 500px;
+    margin: 15px;
+  }
+  #contact > #form-container > button {
     border: 1px solid white;
-    background-color: green;
-    color: white;
-    padding: 10px;
-    border-radius: 100px;
-    display: flex;
-    margin: 10px auto;
+    width: 100px;
+    height: 50px;
+    background-color: #367433;
+    margin: auto;
   }
 }
 /****************CSS*MOBILE****************/

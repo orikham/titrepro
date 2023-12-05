@@ -9,22 +9,76 @@
 		<section id="contact" class="row-limit-size">
 
 			<div id="carte-de-visite">
-				<div id="partie1">
-					<h4>L'entreprise {{infosContact[0].name }}</h4>
+				<div class="stylbox">
+					<h4>
+						L'entreprise
+						{{infosContact[0].name }}
+					</h4>
 
-					<p> se situe {{ infosContact[0].adresse }}</p>
 					<p>
-						 
-						Dans la commune de {{ infosContact[0].ville }} {{ infosContact[0].codePostal }}
-					</p>
+						se situe
+						{{ infosContact[0].adresse }}</p>
+					<p>
 
-					<h4>Nous sommes joignable au : </h4>
+						Dans la commune de
+						{{ infosContact[0].ville }}
+						{{ infosContact[0].codePostal }}
+					</p>
+				</div>
+				<div class="stylbox">
+					<h4>Nous sommes joignable au :
+					</h4>
 					<p>
 						{{ infosContact[0].phone }}
 					</p>
 					<p>{{infosContact[0].horaires }}</p>
-				</div>	
+				</div>
+
+
 			</div>
+
+			<form id="form-container" method="post" action="{{ path('app_contact') }}">
+
+				<h3>Formulaire de contact</h3>
+				{{ form_start(form) }}
+
+				<fieldset class="form-group">
+					<div class="box1">
+						<label for="{{ form.nom.vars.id }}">Nom :</label>
+						{{ form_widget(form.nom, {'attr': {'class': 'form-control'}}) }}</div>
+
+					<div class="box2">
+						<label for="{{ form.prenom.vars.id }}">Prénom :</label>
+						{{ form_widget(form.prenom, {'attr': {'class': 'form-control'}}) }}</div>
+
+				</fieldset>
+
+				<fieldset class="form-group">
+					<div class="box1">
+						<label for="{{ form.phone.vars.id }}">Téléphone :</label>
+						{{ form_widget(form.phone, {'attr': {'class': 'form-control'}}) }}</div>
+
+					<div class="box2">
+						<label for="{{ form.mail.vars.id }}">Email :</label>
+						{{ form_widget(form.mail, {'attr': {'class': 'form-control'}}) }}</div>
+
+				</fieldset>
+
+				<fieldset id="form-mess">
+					<div id="objet">
+						<label for="{{ form.object.vars.id }}">Objet :</label>
+						{{ form_widget(form.object, {'attr': {'class': 'form-control'}}) }}</div>
+
+					<div id="message">
+						<label for="{{ form.message.vars.id }}">Message</label>
+						{{ form_widget(form.message, {'attr': {'class': 'form-control'}}) }}</div>
+
+				</fieldset>
+
+				<button type="submit" class="button">Envoyer</button>
+				{{ form_end(form) }}
+			</form>
+
 
 		</section>
 
