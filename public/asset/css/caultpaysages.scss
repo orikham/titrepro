@@ -917,15 +917,15 @@ button {
     /*section contact*/
     
     #contact{
-        
+        padding: 25px;
         background-image: url('../img/branche-fond.png');
         &>#carte-de-visite{
             display:flex;
             justify-content: space-around;
-            margin: 25px;
+            
 
             &>.stylbox{
-                margin: 5px;
+                margin-bottom: 25px;
                 
                 border: 5px solid $cvert;
                 background-color: $cmarron;

@@ -69,15 +69,15 @@ document.addEventListener("DOMContentLoaded", function() {
     
   });
 
-//animation de la présentation dans l'accueil
-window.addEventListener("scroll", function(){
+// //animation de la présentation dans l'accueil
+// window.addEventListener("scroll", function(){
 
-  var scrollPosition = this.window.scrollY;
+//   var scrollPosition = this.window.scrollY;
 
-  if (scrollPosition > 300) {
-    document.getElementById("bio").classList.toggle("gauche");
-  }
-});
+//   if (scrollPosition > 300) {
+//     document.getElementById("bio").classList.toggle("gauche");
+//   }
+// });
 
 
 /**********JS-SECTION-PRESTATION**********/

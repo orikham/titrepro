@@ -668,15 +668,15 @@ button {
   }
   /*section contact*/
   #contact {
+    padding: 25px;
     background-image: url("../img/branche-fond.png");
   }
   #contact > #carte-de-visite {
     display: flex;
     justify-content: space-around;
-    margin: 25px;
   }
   #contact > #carte-de-visite > .stylbox {
-    margin: 5px;
+    margin-bottom: 25px;
     border: 5px solid #367433;
     background-color: #89601e;
   }

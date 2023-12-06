@@ -14,7 +14,7 @@
 					{% set categoryId = 'category-' ~ loop.index %}
 					<div class="interface-prestation-colonnes {{ categoryId }} ">
 						<div class="squelette-interface-prestation {{ 'category-' ~ categorie.name|lower|replace({' ': '-'}) }}">
-							<h3 class="categorie-title">{{ categorie.name }}</h3>
+							<h3 class="categorie-title"><a href="{{ path('app_category', {'categoryId': categorie.id}) }}">{{ categorie.name }}</a></h3>
 							<ul class="menus-sous-cat">
 								{% for sousCategory in categorie.getSoucat|slice(0, 6) %}
 									<li>
