@@ -55,7 +55,9 @@ class ArticlesCrudController extends AbstractCrudController
                     $fileName = md5(uniqid()) . '.' . $uploadedFile->guessExtension();
                     $uploadedFile->move($this->getParameter('kernel.project_dir').'public/asset/img', $fileName);
 
-                    $picture->setTitle($fileName);
+                    $picture->setCovers($fileName);
+                    $picture->setBefores($fileName);
+                    $picture->setAfters($fileName);
                     $picture->setArticles($entityInstance);
 
                     $em->persist($picture);

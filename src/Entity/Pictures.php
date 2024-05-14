@@ -25,6 +25,15 @@ class Pictures
     #[ORM\Column(length: 255)]
     private ?string $field = null;
 
+    #[ORM\Column(length: 255)]
+    private ?string $covers = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $befores = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $afters = null;
+
     
 
     public function getId(): ?int
@@ -81,6 +90,42 @@ class Pictures
     public function setField(string $field): static
     {
         $this->field = $field;
+
+        return $this;
+    }
+
+    public function getCovers(): ?string
+    {
+        return $this->covers;
+    }
+
+    public function setCovers(string $covers): static
+    {
+        $this->covers = $covers;
+
+        return $this;
+    }
+
+    public function getBefores(): ?string
+    {
+        return $this->befores;
+    }
+
+    public function setBefores(string $befores): static
+    {
+        $this->befores = $befores;
+
+        return $this;
+    }
+
+    public function getAfters(): ?string
+    {
+        return $this->afters;
+    }
+
+    public function setAfters(string $afters): static
+    {
+        $this->afters = $afters;
 
         return $this;
     }
