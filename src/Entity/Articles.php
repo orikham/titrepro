@@ -42,6 +42,16 @@ class Articles
     #[ORM\Column]
     private ?\DateTimeImmutable $createdAt = null;
 
+    // Nouvelles propriétés ajoutées
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $cover;
+
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $before;
+
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $after;
+
     public function __construct()
     {
         $this->picture = new ArrayCollection();
@@ -57,7 +67,7 @@ class Articles
         return $this->title;
     }
 
-    public function setTitle(string $title): static
+    public function setTitle(string $title): self
     {
         $this->title = $title;
 
@@ -69,7 +79,7 @@ class Articles
         return $this->contenu;
     }
 
-    public function setContenu(string $contenu): static
+    public function setContenu(string $contenu): self
     {
         $this->contenu = $contenu;
 
@@ -81,7 +91,7 @@ class Articles
         return $this->lieu;
     }
 
-    public function setLieu(string $lieu): static
+    public function setLieu(string $lieu): self
     {
         $this->lieu = $lieu;
 
@@ -96,7 +106,7 @@ class Articles
         return $this->picture;
     }
 
-    public function addPicture(Pictures $picture): static
+    public function addPicture(Pictures $picture): self
     {
         if (!$this->picture->contains($picture)) {
             $this->picture->add($picture);
@@ -106,7 +116,7 @@ class Articles
         return $this;
     }
 
-    public function removePicture(Pictures $picture): static
+    public function removePicture(Pictures $picture): self
     {
         if ($this->picture->removeElement($picture)) {
             // set the owning side to null (unless already changed)
@@ -123,7 +133,7 @@ class Articles
         return $this->category;
     }
 
-    public function setCategory(?Category $category): static
+    public function setCategory(?Category $category): self
     {
         $this->category = $category;
 
@@ -135,7 +145,7 @@ class Articles
         return $this->user;
     }
 
-    public function setUser(?User $user): static
+    public function setUser(?User $user): self
     {
         $this->user = $user;
 
@@ -147,7 +157,7 @@ class Articles
         return $this->active;
     }
 
-    public function setActive(bool $active): static
+    public function setActive(bool $active): self
     {
         $this->active = $active;
 
@@ -159,7 +169,7 @@ class Articles
         return $this->updateAt;
     }
 
-    public function setUpdateAt(?\DateTimeImmutable $updateAt): static
+    public function setUpdateAt(?\DateTimeImmutable $updateAt): self
     {
         $this->updateAt = $updateAt;
 
@@ -171,9 +181,47 @@ class Articles
         return $this->createdAt;
     }
 
-    public function setCreatedAt(\DateTimeImmutable $createdAt): static
+    public function setCreatedAt(\DateTimeImmutable $createdAt): self
     {
         $this->createdAt = $createdAt;
+
+        return $this;
+    }
+
+    // Nouvelles getters et setters pour les propriétés ajoutées
+
+    public function getCover(): ?string
+    {
+        return $this->cover;
+    }
+
+    public function setCover(?string $cover): self
+    {
+        $this->cover = $cover;
+
+        return $this;
+    }
+
+    public function getBefore(): ?string
+    {
+        return $this->before;
+    }
+
+    public function setBefore(?string $before): self
+    {
+        $this->before = $before;
+
+        return $this;
+    }
+
+    public function getAfter(): ?string
+    {
+        return $this->after;
+    }
+
+    public function setAfter(?string $after): self
+    {
+        $this->after = $after;
 
         return $this;
     }
