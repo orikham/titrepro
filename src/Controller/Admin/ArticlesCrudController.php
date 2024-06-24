@@ -39,7 +39,7 @@ class ArticlesCrudController extends AbstractCrudController
             AssociationField::new('category'),
             BooleanField::new('active'),
             DateTimeField::new('createdAt'),
-            //DateTimeField::new('updateAt')->hideOnForm(),
+            DateTimeField::new('updateAt')->hideOnForm(),
         ];
     }
 

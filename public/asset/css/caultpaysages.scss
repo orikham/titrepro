@@ -685,15 +685,11 @@ button {
             width: 100%;
             height: 600px;
             display: flex;
-
             margin-top: 50px;
-
-
 
             &>#bio {
                 width: 50%;
-                height: 100%;
-                
+                height: 100%;     
                 display: flex;
                 border-top: 1px solid $cvert;
                 border-bottom: 1px solid $cvert;
