@@ -26,13 +26,13 @@ class Pictures
     private ?string $field = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $covers = null;
+    private ?string $cover = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $befores = null;
+    private ?string $before = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $afters = null;
+    private ?string $after = null;
 
     
 
@@ -94,38 +94,38 @@ class Pictures
         return $this;
     }
 
-    public function getCovers(): ?string
+    public function getCover(): ?string
     {
-        return $this->covers;
+        return $this->cover;
     }
 
-    public function setCovers(string $covers): static
+    public function setCover(string $cover): static
     {
-        $this->covers = $covers;
+        $this->cover = $cover;
 
         return $this;
     }
 
-    public function getBefores(): ?string
+    public function getBefore(): ?string
     {
-        return $this->befores;
+        return $this->before;
     }
 
-    public function setBefores(string $befores): static
+    public function setBefore(string $before): static
     {
-        $this->befores = $befores;
+        $this->before = $before;
 
         return $this;
     }
 
-    public function getAfters(): ?string
+    public function getAfter(): ?string
     {
-        return $this->afters;
+        return $this->after;
     }
 
-    public function setAfters(string $afters): static
+    public function setAfter(string $after): static
     {
-        $this->afters = $afters;
+        $this->after = $after;
 
         return $this;
     }
